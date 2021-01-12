@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    background-color: wheat;
+    border-radius: 10px;
+
+    padding: 10px;
+    padding-bottom: 30px;
+    margin: 10px;
+}
+
+h1 {
+    margin: 10px;
+}
+
+h2 {
+    margin: 10px;
+}
+
+#elemList {
+    margin: 10px;
+}
+
+#signList {
+    margin: 10px;
+}
+
+#image {
+    margin: 10px;
+}
+
+#traitList {
+    margin: 10px;
+}
