@@ -16,22 +16,22 @@ let signs = [{name: 'Cancer', link: '/water/cancer'}, {name: 'Scorpio', link: '/
 let image
 
 router.get('/water', (req, res) => {
-    image = 'https://www.placecage.com/g/200/300'
+    image = ''
     res.render('index.ejs', {name: '', element: element, sign: signs, traits: zodiacTraits, src:''})
 })
 
 router.get('/cancer', (req, res) => {
-    image = 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Cancer.svg/60px-Cancer.svg.png'
+    image = '../images/cancer.jpg'
     res.render('index.ejs', {name: 'Cancer', element: element, sign: signs, traits: zodiacTraits, src:image})
 })
 
 router.get('/scorpio', (req, res) => {
-    image = 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Scorpio.svg/60px-Scorpio.svg.png'
+    image = '../images/scorpio.jpg'
     res.render('index.ejs', {name: 'Scorpio', element: element, sign: signs, traits: zodiacTraits, src:image})
 })
 
 router.get('/pisces', (req, res) => {
-    image = 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Pisces.svg/60px-Pisces.svg.png'
+    image = '../images/pisces.jpg'
     res.render('index.ejs', {name: 'Pisces', element: element, sign: signs, traits: zodiacTraits, src:image})
 })
 
