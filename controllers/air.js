@@ -8,15 +8,15 @@ router.get('/', (req, res) => {
 })
 
 router.get('/aquarius', (req, res)=>{
-    res.render('./')
+    res.render('aquarius.ejs')
 })
 
 router.get('/gemini', (req, res)=>{
-    res.render('')
+    res.render('gemini.ejs')
 })
 
 router.get('/libra', (req, res)=>{
-    res.render('')
+    res.render('libra.ejs')
 })
 
 
