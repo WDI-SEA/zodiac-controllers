@@ -4,7 +4,6 @@ const layouts = require('express-ejs-layouts')
 app.use(layouts)
 
 app.set('view engine', 'ejs')
-
 app.get('/', (req, res) =>{
     // res.sendFile(__dirname+'/views/index.html')
     res.render('index.ejs')
@@ -12,9 +11,10 @@ app.get('/', (req, res) =>{
 
 app.get('/water', (req, res) =>{
     // res.sendFile(__dirname+'/views/about.html')
-    let waterSigns = []
-    let waterTraits = []
-    res.render('elementDisplay', {signs: waterSigns, traits: waterTraits})
+    let waterSigns = ['this is water']
+    let waterTraits = ['this is water']
+    let waterSymbols = ['cancer symbol', 'scorpio symbol', 'pisces symbol']
+    res.render('elementDisplay', {signs: waterSigns, traits: waterTraits, symbols: waterSymbols})
 })
 
 app.get('/air', (req, res) =>{
