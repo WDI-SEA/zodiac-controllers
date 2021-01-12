@@ -16,8 +16,8 @@ let signs = [{name: 'Cancer', link: '/water/cancer'}, {name: 'Scorpio', link: '/
 let image
 
 router.get('/water', (req, res) => {
-    image = ''
-    res.render('index.ejs', {name: '', element: element, sign: signs, traits: zodiacTraits, src:''})
+    image = '../images/water.png'
+    res.render('index.ejs', {name: '', element: element, sign: signs, traits: zodiacTraits, src:image})
 })
 
 router.get('/cancer', (req, res) => {
