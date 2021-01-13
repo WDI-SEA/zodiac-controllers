@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 
 let waterSigns = ['Pisces', 'Cancer', 'Scorpio']
-const waterPaths = waterSigns.map((sign) => {
+const signPaths = waterSigns.map((sign) => {
     return sign.toLowerCase()
 })
 
@@ -12,7 +12,7 @@ router.get('/', (req, res) =>{
 })
 
 router.get('/:sign', (req, res) => {
-    if(waterPaths.includes(req.params.sign)) {
+    if(signPaths.includes(req.params.sign)) {
         console.log(req.params.sign)
         res.send(req.params.sign)
     } else {

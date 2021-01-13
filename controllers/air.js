@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 
 let airSigns = ['Aquarius', 'Gemini', 'Libra']
-const airPaths = airSigns.map((sign) => {
+const signPaths = airSigns.map((sign) => {
     return sign.toLowerCase()
 })
 
@@ -12,9 +12,9 @@ router.get('/', (req, res) =>{
 })
 
 router.get('/:sign', (req, res) => {
-    if(airPaths.includes(req.params.sign)) {
+    if(signPaths.includes(req.params.sign)) {
         console.log(req.params.sign)
-        res.send(req.params.sign)
+        res.render(`${sign}.ejs`)
     } else {
         console.log('error404')
         res.sendStatus(404)
