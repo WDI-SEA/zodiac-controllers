@@ -3,5 +3,11 @@
         <a href="<%= `/air/${sign.toLowerCase()}` %>"><%= sign %></a>
     </p>
     <% }) %>
+    <% traits.forEach(trait => { %>
+        <p>
+            <%= trait %>
+        </p>
+        <br>
+    <% }) %>
     
     

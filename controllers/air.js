@@ -9,12 +9,16 @@ const signPaths = airSigns.map((sign) => {
 router.get('/', (req, res) =>{
     let airTraits = ['movement', 'creativity', 'action', 'adventure', 'exciting', 'easly provoked']
     res.render('air.ejs', {signs: airSigns, traits: airTraits})
+    res.render('air.ejs', {sign: elementDisplay})
 })
 
 router.get('/:sign', (req, res) => {
+    console.log(signPaths)
     if(signPaths.includes(req.params.sign)) {
         console.log(req.params.sign)
-        res.render(`${sign}.ejs`)
+        res.render(`${req.params.sign}.ejs`, {
+            sign: req.params.sign
+        })
     } else {
         console.log('error404')
         res.sendStatus(404)

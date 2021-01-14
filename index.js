@@ -46,4 +46,4 @@ app.get ('public/images/aquariusVase.jpg', (res, req) => {
     res.render('/aquariusVase.jpg')
 })
 
-app.listen(3000, () => {console.log('I am listeing.')})
+app.listen(3000, () => {console.log('I am listeing port 3000.')})

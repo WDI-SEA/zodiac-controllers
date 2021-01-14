@@ -8,13 +8,16 @@ const signPaths = earthSigns.map((sign) => {
 
 router.get('/', (req, res) =>{
     let earthTraits = ['grounded', 'helpful', 'practical', 'realistic', 'materalistic', 'dependable']
-    res.render('elementDisplay', {signs: earthSigns, traits: earthTraits})
+    res.render('earth.ejs', {signs: earthSigns, traits: earthTraits})
+    res.render('earth.ejs', {sign: elementDisplay})
 })
 
 router.get('/:sign', (req, res) => {
     if(signPaths.includes(req.params.sign)) {
         console.log(req.params.sign)
-        res.send(req.params.sign)
+        res.send(`${req.params.sign}.ejs`, {
+            sign: req.params.sign
+        })
     } else {
         console.log('error404')
         res.sendStatus(404)
