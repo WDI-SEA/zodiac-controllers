@@ -1,4 +1,3 @@
-const { render } = require('ejs')
 const express = require('express')
 const router = express.Router()
 
@@ -8,14 +7,15 @@ const signPaths = fireSigns.map((sign) => {
 })
 
 router.get('/', (req, res) =>{
-    let fireTraits = ['passionate', 'strong emotions', 'temperanmetal', 'eneregetic', 'accomplished', 'interesting']
+    let fireTraits = ['passionate', 'strong emotions', 'tempermental', 'energetic', 'accomplished', 'interesting']
     res.render('fire.ejs', {signs: fireSigns, traits: fireTraits})
+    res.render('fire.ejs', {sign: elementDisplay})
 })
 
 router.get('/:sign', (req, res) => {
     if(signPaths.includes(req.params.sign)) {
         console.log(req.params.sign)
-        res.send(`${req.params.sign}.ejs`, {
+        res.render(`${req.params.sign}.ejs`, {
             sign: req.params.sign
         })
     } else {

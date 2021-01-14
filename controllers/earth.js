@@ -15,7 +15,7 @@ router.get('/', (req, res) =>{
 router.get('/:sign', (req, res) => {
     if(signPaths.includes(req.params.sign)) {
         console.log(req.params.sign)
-        res.send(`${req.params.sign}.ejs`, {
+        res.render(`${req.params.sign}.ejs`, {
             sign: req.params.sign
         })
     } else {

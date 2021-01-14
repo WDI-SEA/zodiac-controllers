@@ -9,12 +9,13 @@ const signPaths = waterSigns.map((sign) => {
 router.get('/', (req, res) =>{
     let waterTraits = ['privite', 'mysterious', 'psyhic', 'charming', 'emotional', 'sensitive']
     res.render('water.ejs', {signs: waterSigns, traits: waterTraits})
+    res.render('water.ejs', {sign: elementDisplay})
 })
 
 router.get('/:sign', (req, res) => {
     if(signPaths.includes(req.params.sign)) {
         console.log(req.params.sign)
-        res.send(`${req.params.sign}.ejs`, {
+        res.render(`${req.params.sign}.ejs`, {
             sign: req.params.sign
         })
     } else {
