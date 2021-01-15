@@ -1,0 +1,28 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Zodiac</title>
+  <link rel="stylesheet" href="../public/style.css" />
+</head>
+
+<body>
+
+    <% if (src != '') { %>
+        <img id='image' src='<%= src %>'> 
+    <% } %>
+
+    <div id='signList'>
+        <% sign.forEach((sign) => { %> - <a href='<%= sign.link %>'><%= sign.name %></a> - <% }) %>
+    </div>
+    
+    <ul id='traitlist'>
+        <% traits.forEach((trait) => { %>
+            <li> <%= trait %> </li>
+        <% }) %>
+    </uL>
+        
+</body>
+</html>
