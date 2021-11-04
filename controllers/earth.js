@@ -19,7 +19,7 @@ router.get('/virgo', (req,res)=>{
 
 router.get('/capricorn', (req,res)=>{
 
-    res.renderFile('earth/capricorn.ejs')
+    res.render('earth/capricorn.ejs')
 })
 
 

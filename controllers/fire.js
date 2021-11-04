@@ -21,6 +21,4 @@ router.get('/sagittarius', (req,res)=>{
     es.render('fire/sagittarius')
 })
 
-
-
 module.exports = router;
