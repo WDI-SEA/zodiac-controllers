@@ -5,27 +5,19 @@ const ejsLayouts = require('express-ejs-layouts')
 
 // middleware
 app.set('view engine', 'ejs')
-
 app.use(ejsLayouts)
 
+// controller configuration
+app.use('/air', require('./controllers/air.js'))
+// controller configuration
+app.use('/earth', require('./controllers/earth.js'))
+// controller configuration
+app.use('/fire', require('./controllers/fire.js'))
+// controller configuration
+app.use('/water', require('./controllers/water.js'))
+
 app.get('/', (req, res)=>{
-    res.send('hello')
-})
-
-app.get('/air', (req, res)=>{
-    const airSigns = ['Aquarius', 'Gemini', 'Libra']
-    const airTraits = ['movement', 'creativity', 'action', 'adventure', 'exciting', 'easily provoked']
-    res.render('air.ejs', {airTraits})
-})
-
-app.get('/earth', (req, res)=>{
-    const earthTraits = ['grounded', 'helpful', 'pratical', 'realistic', 'materialistic', 'dependable']
-    res.render('earth.ejs', {earthTraits})
-})
-
-app.get('/fire', (req, res)=>{
-    const earthTraits = ['grounded', 'helpful', 'pratical', 'realistic', 'materialistic', 'dependable']
-    res.render('earth.ejs', {earthTraits})
+    res.render('index.ejs')
 })
 
 app.listen(8000, ()=>{
