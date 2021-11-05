@@ -1,10 +1,16 @@
 const express = require('express')
 const router = express.Router()
 
-router.get('/fire', (req, res)=>{
-    const fireSigns = ['Aries', 'Leo', 'Sagittarius']
-    const fireTraits = ['passionate', 'strong emotions', 'temperamental', 'energetic', 'accomplished', 'interesting']
-    router.render('fire.ejs', {fireSigns, fireTraits})
+router.get('/aries', (req, res)=>{
+    res.render('fire/aries.ejs')
+})
+
+router.get('/leo', (req, res)=>{
+    res.render('fire/leo.ejs')
+})
+
+router.get('/sagittarius', (req, res)=>{
+    res.render('fire/sagittarius.ejs')
 })
 
 module.exports = router

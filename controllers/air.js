@@ -1,22 +1,17 @@
 const express = require('express')
 const router = express.Router()
 
-router.get('/air/aquarius', (req, res)=>{
-    const airSigns = ['Aquarius', 'Gemini', 'Libra']
-    const airTraits = ['movement', 'creativity', 'action', 'adventure', 'exciting', 'easily provoked']
-    res.render('air.ejs', {airSigns, airTraits})
+router.get('/aquarius', (req, res)=>{
+    // const aquariusImage = 'https://metropolitangirls.com/wp-content/uploads/2019/03/aquarius-in-article.jpg'
+    res.render('air/aquarius.ejs')
 })
 
-router.get('/air/gemini', (req, res)=>{
-    const airSigns = ['Aquarius', 'Gemini', 'Libra']
-    const airTraits = ['movement', 'creativity', 'action', 'adventure', 'exciting', 'easily provoked']
-    res.render('air.ejs', {airSigns, airTraits})
+router.get('/gemini', (req, res)=>{
+    res.render('air/gemini.ejs')
 })
 
-router.get('/air/libra', (req, res)=>{
-    const airSigns = ['Aquarius', 'Gemini', 'Libra']
-    const airTraits = ['movement', 'creativity', 'action', 'adventure', 'exciting', 'easily provoked']
-    res.render('air.ejs', {airSigns, airTraits})
+router.get('/libra', (req, res)=>{
+    res.render('air/libra.ejs')
 })
 
 module.exports = router

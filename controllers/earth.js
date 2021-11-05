@@ -1,22 +1,16 @@
 const express = require('express')
 const router = express.Router()
 
-router.get('/earth/taurus', (req, res)=>{
-    const earthSigns = ['Taurus', 'Virgo', 'Capricorn']
-    const earthTraits = ['grounded', 'helpful', 'pratical', 'realistic', 'materialistic', 'dependable']
-    res.render('earth.ejs', {earthSigns, earthTraits})
+router.get('/taurus', (req, res)=>{
+    res.render('earth/taurus.ejs')
 })
 
-router.get('/earth/virgo', (req, res)=>{
-    const earthSigns = ['Taurus', 'Virgo', 'Capricorn']
-    const earthTraits = ['grounded', 'helpful', 'pratical', 'realistic', 'materialistic', 'dependable']
-    res.render('earth.ejs', {earthSigns, earthTraits})
+router.get('/virgo', (req, res)=>{
+    res.render('earth/virgo.ejs')
 })
 
-router.get('/earth/capricorn', (req, res)=>{
-    const earthSigns = ['Taurus', 'Virgo', 'Capricorn']
-    const earthTraits = ['grounded', 'helpful', 'pratical', 'realistic', 'materialistic', 'dependable']
-    res.render('earth.ejs', {earthSigns, earthTraits})
+router.get('/capricorn', (req, res)=>{
+    res.render('earth/capricorn.ejs')
 })
 
 module.exports = router
