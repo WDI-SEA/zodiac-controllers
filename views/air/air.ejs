@@ -1,0 +1,12 @@
+<h1>Air Signs</h1>
+<ul>
+    <% airSigns.forEach((sign) => { %>
+        <li><a href="/air/<%= sign %>"><%= sign %></a></li>
+    <% }) %>
+</ul>
+<h2>Traits:</h2>
+<ul>
+    <% airTraits.forEach((trait) => { %>
+        <li><%= trait %></li>
+    <% }) %>
+</ul> 
