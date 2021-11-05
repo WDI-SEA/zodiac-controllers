@@ -1,0 +1,16 @@
+<h1>Welcome to the Water Page</h1>
+
+<h2>These are the signs:</h2>
+<ul>
+    <% waterSigns.forEach((el) => { %>
+        <li> <a href="<%= el %>"> <%= el %> </a> </li>
+    <% }) %>
+</ul>
+
+
+<h2>These are your characteristics:</h2>
+<ul>
+    <% waterProps.forEach((el) => { %>
+        <li> <%= el %> </li>
+    <% }) %>
+</ul>
