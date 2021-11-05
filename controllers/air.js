@@ -1,9 +1,10 @@
 const express = require('express')
 const router = express.Router()
 
+const traits = ['Movement', 'Creativity', 'Action', 'Adventure', 'Exciting', 'Easily Provoked']
+const signs = ['Aquarius', 'Gemini', 'Libra']
+
 router.get('/', function (req, res) {
-    const traits = ['Movement', 'Creativity', 'Action', 'Adventure', 'Exciting', 'Easily Provoked']
-    const signs = ['Aquarius', 'Gemini', 'Libra']
     res.render('air/air.ejs', {traits: traits, signs: signs})
 })
 
