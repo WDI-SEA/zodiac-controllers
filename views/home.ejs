@@ -1,0 +1,65 @@
+<header class="container text-center pt-4 w-100 mb-5">
+    <h1 class="w-100">Zodiac Controller</h1>
+</header>
+<div class="container d-flex ">
+    <div class="card mr-3" style="width: 18rem;">
+        <img src="https://www.lifecoachcode.com/wp-content/uploads/2014/08/Air-Earth.jpg" class="card-img-top"
+            alt="The element air">
+        <div class="card-body">
+            <h5 class="card-title text-center border-top"><a class='card-link' href="">Aquarius</a></h5>
+            <h5 class="card-title text-center"> <a class="card-link">Gemini</a> </h5>
+            <h5 class="card-title text-center border-bottom"><a class='card-link' href="">Libra</a></h5>
+            <%air.forEach((mood)=>{%>
+                <p class='card-text text-center'>
+                    <%= mood%>
+                </p>
+                <% })%>
+                    <a class="btn btn-primary d-block" href='/air'><i class="fas fa-wind fa-2x"></i></a>
+        </div>
+    </div>
+    <div class="card mr-3" style="width: 18rem;">
+        <img src="https://www.lifecoachcode.com/wp-content/uploads/2014/08/Water.jpg" class="card-img-top"
+            alt="The element water" height="192">
+        <div class="card-body">
+            <h5 class="card-title text-center border-top"><a class='card-link' href="">Cancer</a></h5>
+            <h5 class="card-title text-center"> <a class="card-link">Pisces</a> </h5>
+            <h5 class="card-title text-center border-bottom"><a class='card-link' href="">Scorpio</a></h5>
+            <%water.forEach((mood)=>{%>
+                <p class='card-text text-center'>
+                    <%= mood%>
+                </p>
+                <% })%>
+                    <a class="btn btn-primary d-block" href='/water'><i class="fas fa-water fa-2x"></i></a>
+        </div>
+    </div>
+    <div class="card mr-3" style="width: 18rem;">
+        <img src="https://images.gemexi.com/blog-pictures/need-enthusiasm-in-life-access-the-power-of-the-fire-element-learn-how-picture.jpg"
+            class="card-img-top" alt="The element fire" height='192'>
+        <div class="card-body">
+            <h5 class="card-title text-center border-top"><a class='card-link' href="">Aries</a></h5>
+            <h5 class="card-title text-center"> <a class="card-link">Leo</a> </h5>
+            <h5 class="card-title text-center border-bottom"><a class='card-link' href="">Sagittarius</a></h5>
+            <%fire.forEach((mood)=>{%>
+                <p class='card-text text-center'>
+                    <%= mood%>
+                </p>
+                <% })%>
+                    <a class="btn btn-primary d-block" href='/fire' disabled><i class="fas fa-fire fa-2x"></i></a>
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img src="https://www.jamesallan.net/articles/assets/Earth.jpg" class="card-img-top" alt="The element earth"
+            width="192" height='192'>
+        <div class="card-body">
+            <h5 class="card-title text-center border-top"><a class='card-link' href="">Capricon</a></h5>
+            <h5 class="card-title text-center"> <a class="card-link">Taurus</a> </h5>
+            <h5 class="card-title text-center border-bottom"><a class='card-link' href="">Virgo</a></h5>
+            <%earth.forEach((mood)=>{%>
+                <p class='card-text text-center'>
+                    <%= mood%>
+                </p>
+                <% })%>
+                    <a class="btn btn-primary d-block" href='/earth'><i class="fas fa-mountain fa-2x"></i></a>
+        </div>
+    </div>
+</div>
