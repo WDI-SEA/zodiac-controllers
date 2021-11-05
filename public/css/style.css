@@ -1,0 +1,13 @@
+body {
+    font-family: helvetica;
+    background: black;
+    color: whitesmoke;
+}
+
+a:link {
+    color: whitesmoke;
+}
+
+a:visited {
+    color: lightsteelblue;
+}

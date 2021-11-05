@@ -6,6 +6,8 @@ app.use(ejsLayouts)
 
 app.set('view engine', 'ejs')
 
+app.use(express.static(__dirname+'/public'))
+
 app.use('/air', require('./controllers/air.js'))
 
 app.use('/earth', require('./controllers/earth.js'))
