@@ -1,8 +1,7 @@
 <h1>Earth Signs</h1>
 <ul>
-    <% earthSigns.forEach(element => { %>
-        <li><%= element %> </li>
-        
+    <% earthSigns.forEach((signs) => { %>
+        <li><a href="/elements/earth/<%= signs %>"> <%= signs %> </a></li>
     <% }) %>
 </ul>
 
