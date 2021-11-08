@@ -6,17 +6,22 @@ const ejsLayouts = require('express-ejs-layouts')
 app.set('view engine', 'ejs')
 //more middleware
 app.use(ejsLayouts)
+// controller config
+app.use('/water',require('./controllers/water'))
+app.use('/air',require('./controllers/air'))
+app.use('/fire',require('./controllers/fire'))
+app.use('/earth',require('./controllers/earth'))
 
 
 app.get('/', (req, res) => {
-  res.send('Home Route')
-  // res.render('index.ejs')
+  // res.send('Home Route')
+  res.render('home.ejs')
 })
 
-app.get('/water', (req, res) => {
-  const arrTraits = ['private','mysterious','pyshic','charming','emotional','sensitive']
-  res.render('earth.ejs',{arrTraits})
-})
+// app.get('/water', (req, res) => {
+//   const arrTraits = ['private','mysterious','pyshic','charming','emotional','sensitive']
+//   res.render('earth.ejs',{arrTraits})
+// })
 
 app.get('/air', (req, res) => {
   const arrTraits = ['movement','creativity','action','adventure','exciting','easily provoked']
