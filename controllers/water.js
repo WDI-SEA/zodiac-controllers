@@ -1,6 +1,12 @@
 const express = require('express')
 const router = express.Router()
 
+router.get('/', (req, res) => {
+  const arrSigns = ['cancer','scorpio','pisces']
+  const arrTraits = ['private','mysterious','pyshic','charming','emotional','sensitive']
+  res.render('water.ejs',{arrSigns,arrTraits})
+})
+
 router.get('/cancer', (req, res) => {
   res.render('water/cancer.ejs')
 })

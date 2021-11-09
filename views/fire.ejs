@@ -1,4 +1,10 @@
 <ul>
+  <% arrSigns.forEach(sign => { %>
+    <li><a href="/fire/<%= sign %>"><%= sign %></a></li>
+  <% }) %>
+</ul>
+<br>
+<ul>
   <% arrTraits.forEach(trait => { %>
     <li><%= trait %></li>
   <% }) %>

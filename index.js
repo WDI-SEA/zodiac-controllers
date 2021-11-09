@@ -4,6 +4,10 @@ const ejsLayouts = require('express-ejs-layouts')
 
 //middleware
 app.set('view engine', 'ejs')
+// Specifies the location of the static assets folder
+app.use(express.static('static'));
+// Sets up body-parser for parsing form data
+app.use(express.urlencoded({ extended: false }));
 //more middleware
 app.use(ejsLayouts)
 // controller config
@@ -19,24 +23,9 @@ app.get('/', (req, res) => {
 })
 
 // app.get('/water', (req, res) => {
-//   const arrTraits = ['private','mysterious','pyshic','charming','emotional','sensitive']
+//   
 //   res.render('earth.ejs',{arrTraits})
 // })
-
-app.get('/air', (req, res) => {
-  const arrTraits = ['movement','creativity','action','adventure','exciting','easily provoked']
-  res.render('earth.ejs',{arrTraits})
-})
-
-app.get('/fire', (req, res) => {
-  const arrTraits = ['passionate','energetic','strong emotions','temperamental','accomplished','interesting']
-  res.render('earth.ejs',{arrTraits})
-})
-
-app.get('/earth', (req, res) => {
-  const arrTraits = ['grounded','helpful','practical','realistic','materialistic','dependable']
-  res.render('earth.ejs',{arrTraits})
-})
 
 app.listen(8000, () => {
   console.log('You\'re listening to 8000!!!!!!!')
