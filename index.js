@@ -11,6 +11,10 @@ app.get('/', (req, res) => {
 })
 
 app.use('/air', require('./controllers/air.js'))
+app.use('/earth', require('./controllers/earth.js'))
+app.use('/fire', require('./controllers/fire.js'))
+app.use('/water', require('./controllers/water.js'))
+
 
 
 
