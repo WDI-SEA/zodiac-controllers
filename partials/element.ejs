@@ -1,0 +1,14 @@
+<%- include('../partials/header.ejs') %> 
+<h1><%= element %> </h1>
+<h4>Signs</h4>
+<ul>
+  <% signs.forEach(sign => { %>
+    <li><%= sign %></li>
+  <% }) %>
+</ul>
+<h4>Traits</h4>
+<ul>
+  <% traits.forEach(trait => { %>
+    <li><%= trait %></li>
+  <% }) %>
+</ul>
