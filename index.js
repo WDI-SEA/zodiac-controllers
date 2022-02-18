@@ -1,7 +1,7 @@
 // required packages
 const express = require('express')
 const ejsLayouts = require('express-ejs-layouts')
-const res = require('express/lib/response')
+
 
 // app setup
 const app = express()
@@ -10,6 +10,9 @@ app.set('view engine', 'ejs')
 
 // middlewares
 app.use(ejsLayouts)
+// adds a static folder to be sent to the client
+app.use(express.static("public"))
+
 
 app.use((req, res, next) => {
   // do some middleware stuff
@@ -44,6 +47,10 @@ app.get('/fire', (req, res) => {
     signs: ['Aries', 'Leo', 'Sagittarius'],
     traits: ['Passionate', 'Strong Emotions', 'Tempermental', 'Lucky', 'Accomplished', 'Intersting']
   })
+})
+
+app.get('/fire/leo', (req, res) => {
+  res.render('fire/leo.ejs', { sign: 'leo' })
 })
 
 app.get('/air', (req, res) => {
