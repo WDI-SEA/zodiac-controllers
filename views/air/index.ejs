@@ -2,8 +2,8 @@
 
 <h2>Signs</h2>
 <ul>
-<% signs.forEach(element => { %>
-    <li><%=element%></li>
+<% signs.forEach(sign => { %>
+    <li><a href="<%=element.toLowerCase()%>/<%=sign.toLowerCase()%>"><%=sign%></a></li>
            <% }) %>
    </ul>
 <h2>Traits</h2>
