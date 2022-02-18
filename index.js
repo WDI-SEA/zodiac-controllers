@@ -12,39 +12,45 @@ app.use((req, res, next) => {
 	next();
 });
 
+app.use(express.static('public'));
+app.use('/water', require('./controllers/waterController'));
+app.use('/air', require('./controllers/airController'));
+app.use('/fire', require('./controllers/fireController'));
+app.use('/earth', require('./controllers/earthController'));
+
 app.get('/', (req, res) => {
 	res.render('index.ejs');
 });
 
 app.get('/water', (req, res) => {
 	res.render('water.ejs', {
-		element: 'Water',
+		element: 'water',
 		traits: [ 'private', 'mysterious', 'psychic', 'charming', 'emotional', 'sensitive' ],
-		signs: [ 'Pisces', 'Cancer', 'Scorpio' ]
+		signs: [ 'pisces', 'cancer', 'scorpio' ]
 	});
 });
 
 app.get('/air', (req, res) => {
 	res.render('air.ejs', {
-		element: 'Air',
+		element: 'air',
 		traits: [ 'movement', 'creativity', 'action', 'adventure', 'exciting', 'easily provoked' ],
-		signs: [ 'Aquarious', 'Gemini', 'Libra' ]
+		signs: [ 'aquarius', 'gemini', 'libra' ]
 	});
 });
 
 app.get('/fire', (req, res) => {
 	res.render('fire.ejs', {
-		element: 'Fire',
+		element: 'fire',
 		traits: [ 'passionate', 'strong emotions', 'temperamental', 'energetic', 'accomplished', 'interesting' ],
-		signs: [ 'Aries', 'Leo', 'Sagittarious' ]
+		signs: [ 'aries', 'leo', 'sagittarius' ]
 	});
 });
 
 app.get('/earth', (req, res) => {
 	res.render('earth.ejs', {
-		element: 'Earth',
+		element: 'earth',
 		traits: [ 'grounded', 'helpful', 'practical', 'realistic', 'materialistic', 'dependable' ],
-		signs: [ 'Taurus', 'Virgo', 'Capricorn' ]
+		signs: [ 'taurus', 'virgo', 'capricorn' ]
 	});
 });
 
@@ -52,6 +58,7 @@ app.use((req, res) => {
 	res.send('404 error, page not found');
 });
 
-app.listen(2000, () => {
+app.listen(5000, () => {
 	console.log('Nodemon is running');
+	console.log(__dirname);
 });
