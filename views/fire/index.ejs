@@ -1,12 +1,12 @@
-<h1><%=element%></h1>
+<h2><%=element%></h2>
 
-<h2>Signs</h2>
-<ul>
+<h4>Signs</h4>
+<ul class="signs-list">
 <% signs.forEach(sign => { %>
     <li><a href="<%=element.toLowerCase()%>/<%=sign.toLowerCase()%>"><%=sign%></a></li>
            <% }) %>
    </ul>
-<h2>Traits</h2>
+<h4>Traits</h4>
    <ul>
     <% traits.forEach(element => { %>
  <li><%=element%></li>

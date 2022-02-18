@@ -16,13 +16,13 @@ router.get('/water', (req, res) => {
     })
   })
   router.get('/water/cancer',(req,res)=>{
-    res.render('./water/image.ejs', {image:'/imgs/cancer.png'})
+    res.render('./water/image.ejs', {image:'/imgs/cancer.png', sign: 'Cancer'})
   })
   router.get('/water/scorpio',(req,res)=>{
-    res.render('./water/image.ejs', {image:'/imgs/scorpio.png'})
+    res.render('./water/image.ejs', {image:'/imgs/scorpio.png', sign: 'Scorpio'})
   })
   router.get('/water/pisces',(req,res)=>{
-    res.render('./water/image.ejs', {image:'/imgs/pisces.png'})
+    res.render('./water/image.ejs', {image:'/imgs/pisces.png', sign: 'Pisces'})
   })
 
   module.exports = router

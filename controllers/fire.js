@@ -16,14 +16,14 @@ router.get('/fire', (req, res) => {
     })
   })
   router.get('/fire/leo',(req,res)=>{
-    res.render('./fire/image.ejs', {image:'/imgs/leo.png'})
+    res.render('./fire/image.ejs', {image:'/imgs/leo.png', sign: 'Leo'})
   })
   router.get('/fire/aries',(req,res)=>{
-    res.render('./fire/image.ejs', {image:'/imgs/aries.png'})
+    res.render('./fire/image.ejs', {image:'/imgs/aries.png', sign: 'Aries'})
   })
 
   router.get('/fire/sagitarrius',(req,res)=>{
-    res.render('./fire/image.ejs', {image:'/imgs/sagittarius.png'})
+    res.render('./fire/image.ejs', {image:'/imgs/sagittarius.png', sign: 'Sagittarius'})
   })
   
 module.exports=router

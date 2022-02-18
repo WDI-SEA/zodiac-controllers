@@ -16,13 +16,13 @@ router.get('/air', (req, res) => {
     })
   })
   router.get('/air/libra',(req,res)=>{
-    res.render('./air/image.ejs', {image:'/imgs/libra.png'})
+    res.render('./air/image.ejs', {image:'/imgs/libra.png', sign: 'Libra'})
   })
   router.get('/air/aquarius',(req,res)=>{
-    res.render('./air/image.ejs',{image:'/imgs/aquarius.png'})
+    res.render('./air/image.ejs',{image:'/imgs/aquarius.png', sign: 'Aquarius'})
   })
   router.get('/air/gemini',(req,res)=>{
-    res.render('./air/image.ejs', {image:'/imgs/gemini.png'})
+    res.render('./air/image.ejs', {image:'/imgs/gemini.png', sign: 'Gemini'})
   })
 
 
