@@ -15,23 +15,26 @@ app.get('/', (req, res)=>{
 
 // EARTH route
 app.get('/earth', (req, res)=>{
-    res.render('earth.ejs', {})
+    res.render('earth.ejs', {earth: ['Grounded', 'Helpful', 'Practical', 'Realistic', 'Materialistic', 'Dependable']})
     // res.send('Hello Earth Nation')
 })
 
 // FIRE route
 app.get('/fire', (req, res)=>{
-    res.send('Hello World')
+    res.render('fire.ejs', {fire: ['Passionate', 'Strong Emotions', 'Tempermental', 'Energetic', 'Accomplished', 'Interesting']})
+    // res.send('Hello Fire Nation')
 })
 
 // WATER route
 app.get('/water', (req, res)=>{
-    res.send('Hello World')
+    res.render('water.ejs', {water: ['Private', 'Mysterious', 'Psychic', 'Charming', 'Emotional', 'Sensitive']})
+    // res.send('Hello Water Nation')
 })
 
 // AIR route
 app.get('/air', (req, res)=>{
-    res.send('Hello World')
+    res.render('air.ejs', {air: ['Movement', 'Creativity', 'Action', 'Adventure', 'Exciting', 'Easily Provoked']})
+    // res.send('Hello Air Nation')
 })
 
 app.listen(8000, ()=>{
