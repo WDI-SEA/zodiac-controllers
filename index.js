@@ -21,29 +21,45 @@ app.get('/', (req, res)=> {
 
 // water
 app.get('/water', (req, res)=> {
-    let waterTraits = ['private', 'mysterious', 'psychic', 'charming', 'emotional', 'sensitive']
-    res.render('water.ejs', {waterTraits})
+    res.render('./water/index.ejs', {
+        element: 'Water',
+        signs: ['Pisces', 'Cancer', 'Scorpio'],
+        traits: ['private', 'mysterious', 'psychic', 'charming', 'emotional', 'sensitive'],
+    })
 });
 
 // air
 app.get('/air', (req, res)=> {
-    let airTraits = ['movement', 'creativity', 'action', 'adventure', 'exciting', 'easily provoked']
-    res.render('air.ejs', {airTraits})
+    res.render('./air/index.ejs', {
+        element: 'Air',
+        signs: ['Aquarius', 'Gemini', 'Libra'],
+        traits: ['movement', 'creativity', 'action', 'adventure', 'exciting', 'easily provoked']
+    })
 });
 
 // fire
 app.get('/fire', (req, res)=> {
-    let fireTraits = ['passionate', 'strong emotions', 'temperamental', 'energetic', 'accomplished', 'interesting']
-    res.render('fire.ejs', {fireTraits})
+    res.render('./fire/index.ejs', {
+        element: 'Fire',
+        signs: ['Aries', 'Leo', 'Sagittarius'],
+        traits: ['passionate', 'strong emotions', 'temperamental', 'energetic', 'accomplished', 'interesting'],
+    })
 });
 
-// earth
 app.get('/earth', (req, res)=> {
-    let earthTraits = ['grounded', 'helpful', 'practical', 'realistic', 'materialistic', 'dependable']
-    res.render('earth.ejs', {earthTraits})
+    res.render('./earth/index.ejs', {
+        element: 'Earth',
+        signs: ['Taurus', 'Virgo', 'Capricorn'],
+        traits: ['grounded', 'helpful', 'practical', 'realistic', 'materialistic', 'dependable'],
+    })
 });
 
-
-app.listen(PORT, ()=> {
-    console.log('Port 8000 is aliving and thriving')
+// very very last middleware is a 404
+app.use((req, res) => {
+    res.send('404 error -- page not found')
 })
+
+app.listen(PORT, err => {
+    if (err) console.log(err)
+    console.log(`Port ${PORT} is aliving and thriving`);
+});
