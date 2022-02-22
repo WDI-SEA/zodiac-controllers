@@ -10,6 +10,7 @@ app.set("view engine", "ejs");
 
 // middlewares
 app.use(ejsLayouts);
+app.use(express.static("public"));
 
 app.use((req, res, next) => {
   // do some middleware stuff
@@ -18,12 +19,17 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use("/earth", require("./controllers/earthController.js"));
+app.use("/fire", require("./controllers/fireController.js"));
+app.use("/air", require("./controllers/airController.js"));
+app.use("/water", require("./controllers/waterController.js"));
+
 app.get("/", (req, res) => {
   res.render("index.ejs");
 });
 
 app.get("/water", (req, res) => {
-  res.render("./water/index.ejs", {
+  res.render("./water/water.ejs", {
     element: "Water",
     signs: ["Pisces", "Cancer", "Scorpio"],
     traits: [
@@ -38,7 +44,7 @@ app.get("/water", (req, res) => {
 });
 
 app.get("/earth", (req, res) => {
-  res.render("./earth/index.ejs", {
+  res.render("./earth/earth.ejs", {
     element: "Earth",
     signs: ["Taurus", "Virgo", "Capicorn"],
     traits: [
@@ -53,7 +59,7 @@ app.get("/earth", (req, res) => {
 });
 
 app.get("/fire", (req, res) => {
-  res.render("./fire/index.ejs", {
+  res.render("./fire/fire.ejs", {
     element: "Fire",
     signs: ["Aries", "Leo", "Sagittarius"],
     traits: [
@@ -68,7 +74,7 @@ app.get("/fire", (req, res) => {
 });
 
 app.get("/air", (req, res) => {
-  res.render("./air/index.ejs", {
+  res.render("./air/air.ejs", {
     element: "Air",
     signs: ["Aquarius", "Gemini", "Libra"],
     traits: [
