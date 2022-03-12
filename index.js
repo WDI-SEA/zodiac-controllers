@@ -1,5 +1,3 @@
-
-
 const express = require('express') //import express
 const ejsLayouts = require('express-ejs-layouts')
 
@@ -11,26 +9,16 @@ PORT = 8000
 app.set('view engine', 'ejs')
 app.use(ejsLayouts)
 
+//controller middleware
+app.use('/air', require('./controllers/air'))
+app.use('/earth', require('./controllers/earth'))
+app.use('/fire', require('./controllers/fire'))
+app.use('/water', require('./controllers/water'))
+
 
 app.get('/', (req,res)=>{
     //res.send('hello') could also put html elements inside res.send i.e. <p>
     res.render('index.ejs')
-})
-
-app.get('/water', (req,res)=>{
-    res.render('water.ejs', {signs: ['pisces', 'cancer', 'scorpio'], waterArr: ['private','mysterious','psychic','charming','emotional','sensitive']})
-})
-
-app.get('/air', (req,res)=>{
-    res.render('air.ejs', {signs: ['aquarius', 'gemini', 'libra'], airArr: ['movement','creativity','action','adventure','exciting','easily provoked']})
-})
-
-app.get('/fire', (req,res)=>{
-    res.render('fire.ejs', {signs: ['aries', 'leo', 'sagittarius'], fireArr: ['passionate','strong emotions','temperamental','energetic','accomplished','interesting']})
-})
-
-app.get('/earth', (req,res)=>{
-    res.render('earth.ejs', {signs: ['taurus', 'virgo', 'capricorn'], earthArr: ['grounded','helpful','practical','realistic','materialistic','dependable']})
 })
 
 app.listen(PORT, err =>{
