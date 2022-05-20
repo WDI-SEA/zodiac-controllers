@@ -14,23 +14,55 @@ app.get("/", (req, res) => {
 })
 
 app.get("/WATER", (req, res) => {
-  const waterTraits = ["mYstEriOuS", "pRiVaRe", "pSYchIc", "cHaRmInG", "emOtiOnAl", "SEnSiTiVe"]
-  res.render("water.ejs", {waterTraits});
+  const waterSigns = ['ScOrPIo', 'cAnCeR', 'PiScEs']
+  const waterTraits = [
+    "mYstEriOuS🥸",
+    "pRiVaRe🤫",
+    "pSYchIc🔮",
+    "cHaRmInG💘",
+    "emOtiOnAl😫",
+    "SEnSiTiVe🥺",
+  ];
+  res.render("water.ejs", {waterTraits, waterSigns});
 });
 
 app.get("/FIRE", (req, res) => {
-  const fireTraits = ["paSsIOnaTe", "sTrOnG eMoTiOns", "tEmPeRaMEnTaL", "eNeRgEtIC", "AcComPliShEd", "iNteResTInG"]
-  res.render("fire.ejs", {fireTraits});
+  const fireSigns = ["ArIeS", "LEo", "sAgItTaRiUs"];
+  const fireTraits = [
+    "paSsIOnaTe👩‍❤️‍💋‍👨",
+    "sTrOnG eMoTiOns😡",
+    "tEmPeRaMEnTaL😤",
+    "eNeRgEtIC🕺",
+    "AcComPliShEd⭐️",
+    "iNteResTInG🌚",
+  ];
+  res.render("fire.ejs", {fireTraits, fireSigns});
 });
 
 app.get("/EARTH", (req, res) => {
-  const earthTraits = ["gRoUnDEd", "HeLpFuL", "PraCTiCaL", "rEaLIsTic", "maTeRiAlIStic", "dEpEnDaBle"]
-  res.render("earth.ejs", {earthTraits});
+  const earthSigns = ["TaUrUs", "vIRgO", "CaPrIcOrN"];
+  const earthTraits = [
+    "gRoUnDEd🐖",
+    "HeLpFuL😌",
+    "PraCTiCaL🔨",
+    "rEaLIsTic💯",
+    "maTeRiAlIStic👛",
+    "dEpEnDaBle🤝",
+  ];
+  res.render("earth.ejs", {earthTraits, earthSigns});
 });
 
 app.get("/AIR", (req, res) => {
-  const airTraits = ["mOvEmeNT", "CreAtiViTY", "AcTiOn", "aDvEnTuRe", "ExcITiNg", "EaSiLy PrOvOKeD"]
-  res.render("air.ejs", {airTraits});
+  const airSigns = ["gEmInI", "lIBrA", "aQuArIuS"];
+  const airTraits = [
+    "mOvEmeNT💃🏻",
+    "CreAtiViTY🎨",
+    "AcTiOn🦹🏼‍♀️",
+    "aDvEnTuRe🏕",
+    "ExcITiNg🎢",
+    "EaSiLy PrOvOKeD💪🏻",
+  ];
+  res.render("air.ejs", {airTraits, airSigns});
 });
 
 app.listen(PORT, () => {
