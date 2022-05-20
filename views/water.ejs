@@ -1,6 +1,11 @@
 <div class="water">
     <h1>Water Signs</h1>
     <ul>
+        <% waterSigns.forEach(sign => { %>
+            <li> <%= sign %> </li>
+        <% }) %>
+    </ul>
+    <ul>
         <% waterTraits.forEach(trait => { %>
             <li> <%= trait %> </li>
         <% }) %>

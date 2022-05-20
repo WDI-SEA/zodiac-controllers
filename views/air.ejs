@@ -1,6 +1,11 @@
 <div class="air">
     <h1>Air Signs</h1>
     <ul>
+        <% airSigns.forEach(sign => { %>
+            <li> <%= sign %> </li>
+        <% }) %>
+    </ul>
+    <ul>
         <% airTraits.forEach(trait => { %>
             <li> <%= trait %> </li>
         <% }) %>
