@@ -2,12 +2,12 @@
     <h1>Air Signs</h1>
     <ul>
         <% airSigns.forEach(sign => { %>
-            <li><a href="/air/<%= sign %>"><%= sign %></a> </li>
+            <li class="list"><a href="/air/<%= sign %>"><%= sign %></a> </li>
         <% }) %>
     </ul>
     <ul>
         <% airTraits.forEach(trait => { %>
-            <li> <%= trait %> </li>
+            <li class="list"> <%= trait %> </li>
         <% }) %>
     </ul>
 </div>

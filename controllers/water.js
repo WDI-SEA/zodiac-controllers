@@ -7,13 +7,13 @@ const router = express.Router()
 // mount routes on the router
 // water
 router.get('/', (req, res) => {
-    const waterSigns = ['PICSES', 'CANCER', 'SCORPIO']
+    const waterSigns = ['PISCES', 'CANCER', 'SCORPIO']
     const waterTraits = ['private', 'mysterious', 'pyschic', 'charming', 'emotional', 'sensitive']
     res.render('water.ejs', {waterSigns, waterTraits})
 })
 
-router.get('/picses', (req, res) => {
-    res.render('img.ejs', {sign: 'picses'})
+router.get('/pisces', (req, res) => {
+    res.render('img.ejs', {sign: 'pisces'})
 })
 
 router.get('/cancer', (req, res) => {

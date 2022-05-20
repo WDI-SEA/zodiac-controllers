@@ -1,23 +1,37 @@
 .index {
     background-color: peachpuff;
+    text-align: center;
 }
 
 .air {
     background-color: #f0f5d7;
     color: #c2c4a1;
+    text-align: center;
 }
 
 .earth {
     background-color: #c5e6a6;
     color: #517d28;
+    text-align: center;
 }
 
 .water {
     background-color: #9bd1e5;
     color: #2a1e5c;
+    text-align: center;
 }
 
 .fire {
     background-color: #ff784f;
     color: #a83b19;
+    text-align: center;
+}
+
+.list {
+    list-style-type: none;
+}
+
+.image {
+    background-color: blanchedalmond;
+    color:goldenrod;
 }
