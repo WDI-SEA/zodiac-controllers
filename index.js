@@ -17,7 +17,7 @@ app.use(express.static("public"));
 app.get('/', (req, res)=>{
     // res.send('this is the home page')
     res.render('index.ejs')
-    // res.sendFile
+    
 })
 
 // water route

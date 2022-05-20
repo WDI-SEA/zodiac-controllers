@@ -5,8 +5,9 @@
 <div>
     <h4>Traits include:</h4>
     <ul>
-        <% for(let i = 0; i < fire.length; i++){ %>
-                <li><%= fire[i] %> </li>
-        <% } %> 
+        <% fire.forEach(element=>{ %>
+            <li><%= element %></li>
+        <% }) %>
+       
     </ul>
 </div>

@@ -5,8 +5,8 @@
 <div>
     <h4>Traits include:</h4>
     <ul>
-        <% for(let i = 0; i < water.length; i++){ %>
-                <li><%= water[i] %> </li>
-        <% } %> 
+        <% water.forEach(element=>{ %>
+            <li><%= element %></li>
+        <% }) %>
     </ul>
 </div>

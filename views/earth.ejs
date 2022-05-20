@@ -5,8 +5,9 @@
 <div>
     <h4>Traits include:</h4>
     <ul>
-        <% for(let i = 0; i < earth.length; i++){ %>
-                <li><%= earth[i] %> </li>
-        <% } %> 
+       
+        <% earth.forEach(element=>{ %>
+            <li><%= element %></li>
+        <% }) %>
     </ul>
 </div>
