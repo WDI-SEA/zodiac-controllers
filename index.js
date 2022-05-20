@@ -21,34 +21,34 @@ app.get('/', (req,res) => {
 })
 // water
 app.get('/water', (req,res) => {
-    const waterTraits = [
+    const traits = [
         'private', 'mysterious', 'psychic', 
         'charming', 'emotional', 'sensitive'
     ]
-    res.render('water.ejs', {waterTraits})
+    res.render('water.ejs', {traits})
 })
 // air 
 app.get('/air', (req, res) => {
-    const airTraits = [
+    const traits = [
         'movement', 'creativity', 'action', 
         'adventure', 'exciting', 'easily provoked'
     ]
-    res.render('air.ejs', {airTraits})
+    res.render('air.ejs', {traits})
 })
 // fire
 app.get('/fire', (req,res) => {
-    const fireTraits = [
+    const traits = [
         'passionate', 'strong emotions', 'temperamental', 
         'energetic', 'accomplished', 'interesting'
     ]
-    res.render('fire.ejs', {fireTraits})
+    res.render('fire.ejs', {traits})
 })
 app.get('/earth', (req,res) => {
-    const earthTraits = [
+    const traits = [
         'grounded', 'helpful', 'practical', 
         'realistic', 'materialistic', 'dependable'
     ]
-    res.render('earth.ejs', {earthTraits})
+    res.render('earth.ejs', {traits})
 })
 
 
