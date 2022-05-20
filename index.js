@@ -7,22 +7,30 @@ app.set('view engine', 'ejs')
 
 app.use(ejsLayouts)
 
+
 // 4 routes
 app.get('/', (req, res) => {
-    res.send('navigation links')
+    res.render('index.ejs')
 })
 app.get('/water', (req, res)=>{
-    res.send('water')
+    const waters = ['PISCES', 'CANCER', 'SCORPIO']
+    res.render('water.ejs', {waters})
 })
 app.get('/air', (req, res)=>{
-    res.send('air')
+    const airs = ['AQUARIUS', 'GEMINI', 'LIBRA']
+    res.render('air.ejs', {airs})
 })
 app.get('/fire', (req, res)=>{
-    res.send('fire')
+    const fires = ['ARIES', 'LEO', 'SAGITTARIUS']
+    res.render('fire.ejs', {fires})
 })
 app.get('/earth', (req, res)=>{
-    res.send('earth')
+    const earths = ['TAURUS', 'VIRGO', 'CAPRICORN']
+    res.render('earth.ejs', {earths})
 })
+app.get('/img', (req, res) => {
+    res.sendFile('/Users/wonjunejung/GA/sei/unit2/zodiac-controllers/zodiac.jpeg')
+}) 
 app.listen(PORT, () => {
     console.log(PORT, 'linked')
 })
