@@ -1,0 +1,19 @@
+<div class="zodiac-info shadow">
+  <h2><%= element %></h2>
+
+  <div class="signs">
+    <ul>
+      <% signs.forEach((sign) => { %>
+      <li><a href="/<%= element %>/<%= sign %>"><%= sign %></a></li>
+      <% }) %>
+    </ul>
+  </div>
+
+  <div class="traits">
+    <ul>
+      <% traits.forEach((trait) => { %>
+      <li><%= trait %></li>
+      <% }) %>
+    </ul>
+  </div>
+</div>

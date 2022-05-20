@@ -1,7 +1,23 @@
+:root {
+  --highlight: #b4924c;
+  --background: #353f53;
+  --dark: #2b2e35;
+}
+
 html,
 body {
   margin: 0;
-  background-color: #dbd4d0;
+  background-color: var(--background);
+  font-family: "Cabin", sans-serif;
+}
+
+a {
+  color: white;
+}
+
+.heading {
+  color: white;
+  margin-bottom: 2rem;
 }
 
 header {
@@ -9,8 +25,10 @@ header {
   align-items: center;
   justify-content: center;
 
-  background-color: orangered;
-  color: white;
+  background-color: var(--highlight);
+  color: black;
+
+  border-bottom: 0.5rem solid black;
 }
 
 header a {
@@ -29,7 +47,6 @@ main {
 nav {
   width: 90%;
   max-width: 60rem;
-  /* max-width: 20rem; */
 }
 
 nav ul {
@@ -43,9 +60,9 @@ nav ul {
 }
 
 .nav-link {
-  background-color: orangered;
+  background-color: var(--highlight);
   padding: 1rem 2rem;
-  color: white;
+  color: black;
   text-decoration: none;
   border-radius: 0.5rem;
   font-weight: bold;
@@ -56,13 +73,24 @@ nav ul {
   margin: 2rem;
   padding: 1rem;
   border-radius: 0.5rem;
-  background-color: white;
+  background-color: var(--dark);
+  color: white;
   width: 60ch;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.shadow {
+  box-shadow: 10px 10px black;
+  border: 0.25rem solid black;
+}
+
+.shadow-small {
+  box-shadow: 5px 5px black;
+  border: 0.25rem solid black;
 }
 
 .zodiac-info h2 {
@@ -80,7 +108,7 @@ nav ul {
 }
 
 .signs {
-  --border: 2px solid black;
+  --border: 2px solid var(--highlight);
   border-top: var(--border);
   border-bottom: var(--border);
   text-transform: uppercase;
@@ -92,4 +120,12 @@ nav ul {
   list-style: none;
 
   text-align: center;
+}
+
+.img-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-block: 1rem;
 }
