@@ -1,0 +1,11 @@
+<h3> <%= element %></h3>
+
+
+<h4>signs</h4>
+
+<% signs.forEach(sign => {%>
+    <li>
+        <a href="/<%= element.toLowerCase() %> <%= sign.toLowerCase()%>"></a>
+    </li>
+
+})
