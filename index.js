@@ -9,19 +9,16 @@ app.set('view engine', 'ejs')
 
 // middlewares
 app.use(ejsLayouts)
+// tell express to send static assests
+app.use(express.static('Public'))
 
 // routes
 app.get('/', (req, res) => {
 	res.render('index.ejs')
 })
 
-app.get('/water', (req, res) => {
-	res.render('water.ejs', {
-		element: 'Water',
-		signs: ['Pisces', 'Cancer', 'Scorpio'],
-		traits: ['private', 'mysterious', 'psychic', 'charming', 'emo', 'sensitive']	
-	})
-})
+// Controllers 
+app.use('/water', require('./controllers/water'))
 
 app.get('/air', (req, res) => {
 	res.render('air.ejs', {
