@@ -1,0 +1,23 @@
+.index {
+    background-color: peachpuff;
+}
+
+.air {
+    background-color: #f0f5d7;
+    color: #c2c4a1;
+}
+
+.earth {
+    background-color: #c5e6a6;
+    color: #517d28;
+}
+
+.water {
+    background-color: #9bd1e5;
+    color: #2a1e5c;
+}
+
+.fire {
+    background-color: #ff784f;
+    color: #a83b19;
+}
