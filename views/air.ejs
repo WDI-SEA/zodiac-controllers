@@ -1,7 +1,3 @@
-<ul> 
-    <h1> air </h1>
-    <% airs.forEach(air => { %>
-        <li><%= air %></li>
-  <%  }) %> 
-    
-</ul>
+<div class="air">
+  <%- include('partials/elements.ejs'), {element, signs, traits} %>
+</div>

@@ -1,7 +1,3 @@
-<ul> 
-    <h1> fire </h1>
-    <% fires.forEach(fire => { %>
-        <li><%= fire %></li>
-  <%  }) %> 
-    
-</ul>
+<div class="fire">
+  <%- include('partials/elements.ejs'), {element, signs, traits} %>
+</div>
