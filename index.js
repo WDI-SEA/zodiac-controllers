@@ -16,32 +16,16 @@ app.get('/', (req, res) => {
 })
 
 // water
-app.get('/water', (req, res) => {
-    const waterSigns = ['PICSES', 'CANCER', 'SCORPIO']
-    const waterTraits = ['private', 'mysterious', 'pyschic', 'charming', 'emotional', 'sensitive']
-    res.render('water.ejs', {waterSigns, waterTraits})
-})
+app.use('/water', require('./controllers/water'))
 
 // air
-app.get('/air', (req, res) => {
-    const airSigns = ['AQUARIUS', 'GEMINI', 'LIBRA']
-    const airTraits = ['movement', 'creativity', 'action', 'adventure', 'exciting', 'easily provoked']
-    res.render('air.ejs', {airSigns, airTraits})
-})
+app.use('/air', require('./controllers/air'))
 
 // fire
-app.get('/fire', (req, res) => {
-    const fireSigns = ['ARIES', 'LE0', 'SAGITARIUS']
-    const fireTraits = ['passionate', 'strong emotions', 'temperamental', 'energetic', 'accomplished', 'interesting']
-    res.render('fire.ejs', {fireSigns, fireTraits})
-})
+app.use('/fire', require('./controllers/fire'))
 
 // earth
-app.get('/earth', (req, res) => {
-    const earthSigns = ['TAURUS', 'VIRGO', 'CAPRICORN']
-    const earthTraits = ['grounded', 'helpful', 'practical', 'realistic', 'materialistic', 'dependable']
-    res.render('earth.ejs', {earthSigns, earthTraits})
-})
+app.use('/earth', require('./controllers/earth'))
 
 
 app.listen(PORT, () => {
