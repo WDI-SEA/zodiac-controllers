@@ -9,16 +9,16 @@ a {
     color: white;
     text-decoration: none;
 }
-#water {
+#Water {
     color: rgb(52, 112, 251)
 }
-#air {
-    color:rgb(207, 207, 207)
+#Air {
+    color:rgb(255, 255, 255)
 }
-#earth {
+#Earth {
     color:rgb(4, 201, 83)
 }
-#fire {
+#Fire {
     color:rgb(240, 124, 0)
 }
 
