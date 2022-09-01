@@ -1,9 +1,11 @@
 const express = require('express')
+const ejsLayouts = require('express-ejs-layouts')
 
 const app = express()
 const PORT = 3000
 
 app.set('view engine', 'ejs')
+app.use(ejsLayouts)
 
 // ROUTES
 app.get('/', (req, res) => {
