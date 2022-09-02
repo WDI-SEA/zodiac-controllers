@@ -1,11 +1,11 @@
 
 // import the required packages
 const express = require('express')
-// const ejsExpressLayouts = require('express-ejs-layouts')
+const ejsExpressLayouts = require('express-ejs-layouts')
 
 // set up express instance app
 const app = express()
-const PORT = 8003
+const PORT = 3000
 const introStatement = `Let's learn about the signs!`
 // const signsArr = ['water', 'air', 'fire', 'earth']
 // const airTraitsArr = ['movement', 'creativity', 'action', 'adventure', 'exciting', 'easily provoked']
@@ -42,7 +42,7 @@ const elements = {
 
 // CONFIGURE APP TO USE EJS
 app.set('view engine', 'ejs')
-// app.use(ejsExpressLayouts)
+app.use(ejsExpressLayouts)
 
 app.use('/air', require('./controllers/air'))
 app.use('/water', require('./controllers/water'))

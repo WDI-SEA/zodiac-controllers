@@ -20,4 +20,12 @@ router.get('/gemini', (req, res) => {
     res.render('air/gemini')
 })
 
+router.get('/libra', (req, res) => {
+    res.render('air/libra')
+})
+
+router.get('/aquarius', (req, res) => {
+    res.render('air/aquarius')
+})
+
 module.exports = router
