@@ -36,7 +36,28 @@ app.get('/earth', (req, res) => {
     res.render('earth', {traits: earthTraits})
 })
 
-
+const elements = {
+    air: {
+        name: "air",
+        signs: ["aquarius", "geminin", "libra"],
+        traits: ["movement", "creativity", "action", "adventure", "exciting", "easily provoked"]
+    },
+    water: {
+        name: "water",
+        signs: ["pisces", "cancer", "scorpio"],
+        traits: ["private", "mysterious", "pyshic", "charming", "emotional", "sensitive"]
+    },
+    fire: {
+        name: "fire",
+        signs: ["aries", "leo", "sagittarius"],
+        traits: ["passionate", "strong emotions", "tempermental", "energetic", "accompli,sed", "interesting"]
+    },
+    earth: {
+        name: "earth",
+        signs: ["taurus", "virgo", "capricorn"],
+        traits: ["grounded", "helpful", "practical", "realistic", "materialistic", "dependable"]
+    }
+}
 
 // LISTENER AT THE BOTTOM
 app.listen(PORT, () => {
