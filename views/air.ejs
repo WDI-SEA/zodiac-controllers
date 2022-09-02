@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Air Signs</title>
+  </head>
+  <body>
+    <hi> <%= title %> </hi>
+    <ul> Signs:
+        <% signs.forEach(sign => { %>
+            <li><%= sign %></li>
+        <% }) %>
+    </ul>
+    <ol> Traits:
+        <% traits.forEach(trait => { %>
+            <li><%= trait %></li>
+        <% }) %>
+    </ol>
+    
+  </body>
+</html>
