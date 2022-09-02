@@ -1,0 +1,8 @@
+<%- include('layout.ejs') %>
+<h2><%= type %> Signs</h2>
+<%= signs %>
+<ul>
+<% traits.forEach(trait=>{ %>
+    <li><%= trait %></li>
+<% }) %>
+</ul>
