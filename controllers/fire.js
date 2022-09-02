@@ -4,13 +4,13 @@ const router = express.Router()
 // const path = require('path')
 // router.use('/fire', express.static(path.join(__dirname, 'public')))
 
-router.get('/leo', (req, res) => {
+router.get('/Leo', (req, res) => {
     res.redirect('/leo.png')
 })
-router.get('/aries', (req, res) => {
+router.get('/Aries', (req, res) => {
     res.redirect('/aries.png')
 })
-router.get('/sagittarius', (req, res) => {
+router.get('/Sagittarius', (req, res) => {
     res.redirect('/sagittarius.png')
 })
 
