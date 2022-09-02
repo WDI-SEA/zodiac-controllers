@@ -1,14 +1,13 @@
-<%- include('partials/header.ejs') %>
-<a href="/">HOME</a>
-<ul>
-    <% elements.water.forEach(sign => { %>
-        <li><%= sign.signs %> </li>
-    <% }) %>
-</ul>
-<ul>
-    <% elements.water.forEach(thing => { %>
-        <li><%= thing.attributes %> </li>
-    <% }) %>
-</ul>
 
-<%- include('partials/footer.ejs') %>
+<ul>
+    <% waterSigns.forEach(sign => { %>
+        <a href="water/<%= sign %>">
+            <%= sign %>
+        </a>
+    <% }) %>
+</ul>
+<ul>
+    <% waterThings.forEach(thing => { %>
+        <li><%= thing %> </li>
+    <% }) %>
+</ul>
