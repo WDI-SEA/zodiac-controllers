@@ -1,5 +1,5 @@
 const express = require('express')
-
+const ejsLayouts = require('express-ejs-layouts')
 //configure express and set port
 const app = express()
 const PORT = 8000
@@ -13,10 +13,13 @@ const fireSigns = ['Aries', 'Leo', 'Sagittarius']
 const fireTraits = ['passionate', 'strong emotions', 'tempermental', 'energetic', 'accomplished', 'interesting']
 const earthSigns = ['Taurus', 'Virgo', 'Capricorn']
 const earthTraits = ['grounded', 'helpful', 'practical', 'realistic', 'materialistic', 'dependable']
+//configure app to run EJS and layouts
+app.set('view engine', 'ejs')
+app.use(ejsLayouts)
 
 //set routes
 app.get('/', (req,res) =>{
-    res.render('index.ejs')
+    res.render('home')
 })
 app.get('/water', (req,res) =>{
     res.render('water.ejs', {signs: waterSigns, traits: waterTraits})
