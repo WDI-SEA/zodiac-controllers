@@ -31,6 +31,7 @@ app.use('/air', require('./controllers/air.js'))
 app.use('/water', require('./controllers/water.js'))
 app.use('/fire', require('./controllers/fire.js'))
 app.use('/earth', require('./controllers/earth.js'))
+app.use(express.static('public'))
 
 // ROUTES
 app.get('/', (req, res) => {

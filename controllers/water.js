@@ -1,14 +1,17 @@
 const express = require('express')
 const router = express.Router()
 
+// const path = require('path')
+// router.use('/water', express.static(path.join(__dirname, 'public')))
+
 router.get('/cancer', (req, res) => {
-    res.send('cancer')
+    res.redirect('/cancer.png')
 })
 router.get('/scorpio', (req, res) => {
-    res.send('scorpio')
+    res.redirect('/scorpio.png')
 })
 router.get('/pisces', (req, res) => {
-    res.send('pisces')
+    res.redirect('/pisces.png')
 })
 
 module.exports = router
