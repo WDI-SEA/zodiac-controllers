@@ -23,15 +23,15 @@ app.get('/water', (req,res) =>{
 })
 
 app.get('/air', (req,res) =>{
-    res.render('air.ejs',  {signs: airSigns, traits: airTraits})
+    res.render('air.ejs', {signs: airSigns, traits: airTraits})
 })
 
 app.get('/fire', (req,res) =>{
-    res.render('fire.ejs')
+    res.render('fire.ejs', {signs: fireSigns, traits: fireTraits})
 })
 
 app.get('/earth', (req,res) =>{
-    res.render('earth.ejs')
+    res.render('earth.ejs', {signs: earthSigns, traits: earthTraits})
 })
 //set port listener
 
