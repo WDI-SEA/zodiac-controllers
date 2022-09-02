@@ -27,6 +27,10 @@ const earth = {
 // configure app to use ejs
 app.set('view engine', 'ejs')
 app.use(expresEjsLayouts)
+app.use('/air', require('./controllers/air.js'))
+app.use('/water', require('./controllers/water.js'))
+app.use('/fire', require('./controllers/fire.js'))
+app.use('/earth', require('./controllers/earth.js'))
 
 // ROUTES
 app.get('/', (req, res) => {
