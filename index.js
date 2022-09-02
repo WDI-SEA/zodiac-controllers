@@ -4,24 +4,33 @@ const express = require('express')
 const app = express()
 const PORT = 8000
 
+//zodiac arrays
+const waterSigns = ['Pisces', 'Cancer', 'Scorpio']
+const waterTraits = ['private', 'mysterious', 'pyschic', 'charming', 'emotional', 'sensitive']
+const airSigns = ['Aquarius', 'Gemini', 'Libra']
+const airTraits = ['movement', 'creativity', 'action', 'adventure', 'exciting', 'easily provoked']
+const fireSigns = ['Aries', 'Leo', 'Sagittarius']
+const fireTraits = ['passionate', 'strong emotions', 'tempermental', 'energetic', 'accomplished', 'interesting']
+const earthSigns = ['Taurus', 'Virgo', 'Capricorn']
+const earthTraits = ['grounded', 'helpful', 'practical', 'realistic', 'materialistic', 'dependable']
 //set routes
 app.get('/', (req,res) =>{
-    res.send("hola")
+    res.render('index.ejs')
 })
 app.get('/water', (req,res) =>{
-    res.send('agua')
+    res.render('water.ejs')
 })
 
 app.get('/air', (req,res) =>{
-    res.send('aire')
+    res.render('air.ejs')
 })
 
 app.get('/fire', (req,res) =>{
-    res.send("fuego")
+    res.render('fire.ejs')
 })
 
 app.get('/earth', (req,res) =>{
-    res.send('mundo')
+    res.render('earth.ejs')
 })
 //set port listener
 
