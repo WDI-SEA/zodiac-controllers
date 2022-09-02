@@ -1,4 +1,14 @@
 <% let arrWaterTraits= ['Private','Mysterious','Psychic','Charming','Emotional','Sensitive'] %> 
+<% let waterSign = ['Pisces ♓︎','Cancer ♋︎','Scorpio ♏️'] %> 
+
+<h1>🌊 Water Horoscopes 🌊 </h1>
+
+<% waterSign.forEach(sign => {%> 
+    <h2><%= sign %></h2>
+<% }) %> 
+
+<h3>🔮 Water Sign Traits 🔮</h3>
+
 <% arrWaterTraits.forEach(trait => {%> 
     <li> <%= trait %></li>
     <% }) %> 
