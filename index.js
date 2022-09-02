@@ -27,22 +27,23 @@ const elements = {
     }
 }
 
-// home route = localhost:8000/
-// HTTP verb = GET    URL pattern = '/'
-
+// Set the view engine
+app.set('view engine', 'ejs')
 //  define express routes???
 
 // home route = localhost:8000/
 // HTTP verb = GET    URL pattern = '/'
 app.get('/', (req, res) => {
     // console.log('Welcome nighthawks, we have been expecting you🎩')
-    res.send('It works! ha ha, IT WORKS! I FINALLY invent something that works!')
+    // res.send('It works! ha ha, IT WORKS! I FINALLY invent something that works!')
+    res.render('index')
 })
 // home route = localhost:8000/
 // HTTP verb = GET    URL pattern = '/air'
 app.get('/air', (req, res) => {
     // console.log('Welcome nighthawks, we have been expecting you🎩')
-    res.send('AIR')
+    // res.send('AIR')
+    res.json(elements.air)
 })
 // home route = localhost:8000/
 // HTTP verb = GET    URL pattern = '/water'
