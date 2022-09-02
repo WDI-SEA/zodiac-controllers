@@ -7,27 +7,40 @@ const PORT = 8001
 app.set("view engine", "ejs")
 app.use(ejslayouts)
 
-// ROUTES
+const elements = {
+    air: {
+        name: "air",
+        signs: ["aquarius", "geminin", "libra"],
+        traits: ["movement", "creativity", "action", "adventure", "exciting", "easily provoked"]
+    },
+    water: {
+        name: "water",
+        signs: ["pisces", "cancer", "scorpio"],
+        traits: ["private", "mysterious", "pyshic", "charming", "emotional", "sensitive"]
+    },
+    fire: {
+        name: "fire",
+        signs: ["aries", "leo", "sagittarius"],
+        traits: ["passionate", "strong emotions", "tempermental", "energetic", "accompli,sed", "interesting"]
+    },
+    earth: {
+        name: "earth",
+        signs: ["taurus", "virgo", "capricorn"],
+        traits: ["grounded", "helpful", "practical", "realistic", "materialistic", "dependable"]
+    }
+}
+
+// ROUTES home route local host: 8001
+// HTTP verb = GET URL pattern="/"
 app.get("/", (req, res) => {
     res.render('index.ejs')
 })
-
-const waterTraits = ['private', 'mysterious', 'charmning', 'emotional', 'sensitive']
-app.get("/water", (req, res) => {
-    res.render('water.ejs', {traits: waterTraits})
-})
-
-const airTraits = ['movement','creativity', 'action', 'exciting', 'easily provoked']
 app.get("/air", (req, res) => {
     res.render('air.ejs', {traits: airTraits})
 })
-
-const fireTraits = ['passionate', 'strong emotions', 'temperatal', 'energetic', 'accomplished', 'interesting']
 app.get("/fire", (req, res) => {
     res.render('fire.ejs', {traits: fireTraits})
 })
-
-const earthTraits = ['ground', 'helpful', 'practical', 'realistic', 'materialistic', 'dependable']
 app.get("/earth", (req, res) => {
     res.render('earth.ejs', {traits: earthTraits})
 })
