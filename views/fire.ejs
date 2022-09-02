@@ -1,4 +1,13 @@
 <% let arrFireTraits= ['Passionate','Strong Emotions','Temperamental','Energetic','Accomplished','Interesting'] %> 
+
+<% let fireSign = ['Aries','Leo','Sagittarius'] %> 
+<h1> Fire Horoscopes</h1>
+
+<% fireSign.forEach(sign => {%> 
+    <h2><%= sign %></h2>
+<% }) %> 
+
+<h3> Air Sign Traits </h3>
 <% arrFireTraits.forEach(trait => {%> 
     <li> <%= trait %></li>
     <% }) %> 

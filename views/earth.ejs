@@ -1,4 +1,15 @@
 <% let arrEarthTraits= ['Grounded','Helpful','Practical','Realistic','Materialistic','Dependable'] %> 
+
+<% let earthSign = ['Taurus','Virgo','Capricorn'] %> 
+
+<h1>Earth Horoscopes</h1>
+
+<% earthSign.forEach(sign => {%> 
+    <h2><%= sign %></h2>
+<% }) %> 
+
+<h3> Earth Sign Traits </h3>
+
 <% arrEarthTraits.forEach(trait => {%> 
     <li> <%= trait %></li>
     <% }) %> 
