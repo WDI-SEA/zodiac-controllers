@@ -32,6 +32,13 @@ const elements = {
 
 app.set("view engine", "ejs");    // Set view engine to EJS
 app.use(ejsLayouts);
+app.use(express.static("public"));
+
+// Controllers
+app.use("/water", require("./controllers/water"));
+app.use("/earth", require("./controllers/earth"));
+app.use("/fire", require("./controllers/fire"));
+app.use("/air", require("./controllers/air"));
 
 // Routes
 app.get("/", (req, res) =>
