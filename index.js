@@ -29,6 +29,14 @@ const elements = {
 // SET THE VIEW ENGINE
 app.set("view engine", "ejs")
 
+app.use('/air', require('./controllers/air'))
+
+app.use('/earth', require('./controllers/earth'))
+
+app.use('/fire', require('./controllers/fire'))
+
+app.use('/water', require('./controllers/water'))
+
 // home route = localhost:3000/
 // HTTP verb = GET   URL pattern = "/"
 app.get("/", (req, res) => {
