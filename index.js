@@ -7,28 +7,46 @@ app.listen(PORT, ()=> {
     console.log(`intruder in sector ${PORT}`)
 })
 
-const fireSigns = ["Aries", "Leo", "Sagittarius"]
-const fireThings = ['Passionate', 'Strong Emotions', 'Tempermental', 'Energetic', 'Accomplished', 'Interesting']
-const waterSigns = ["Pisces", "Cancer", "Scorpio"]
-const waterThings = ['Private', 'Mysterious', 'Psychic', 'Charming', 'Emotional', 'Sensitive']
-const airSigns = ["Aquarius", "Gemini", "Libra"]
-const airThings = ['Movement', 'Creativity', 'Action', 'Adventure', 'Exciting', 'Easily Provoked']
-const earthSigns = ["Taurus", "Virgo", "Capricorn"]
-const earthThings = ['Grounded', 'Helpful', 'Practical', 'Realistic', 'Materialistic', 'Dependable']
+const elements = {
+    air: {
+        name: 'Air',
+        signs: ["Aquarius", "Gemini", "Libra"],
+        attributes: ['Movement', 'Creativity', 'Action', 'Adventure', 'Exciting', 'Easily Provoked']
+    },
+
+    fire: {
+        name: 'Fire',
+        signs: ["Aries", "Leo", "Sagittarius"],
+        attributes: ['Passionate', 'Strong Emotions', 'Tempermental', 'Energetic', 'Accomplished', 'Interesting']
+    },
+
+    water: {
+        name: 'Water',
+        signs: ["Pisces", "Cancer", "Scorpio"],
+        attributes: ['Private', 'Mysterious', 'Psychic', 'Charming', 'Emotional', 'Sensitive']
+    },
+
+    earth: {
+        name: 'Earth',
+        signs: ["Taurus", "Virgo", "Capricorn"],
+        attributes: ['Grounded', 'Helpful', 'Practical', 'Realistic', 'Materialistic', 'Dependable']
+    }
+}
+
 
 
 app.get('/', (req, res) => {
     res.render('index')
 })
 app.get('/water', (req, res) => {
-    res.render('water', {waterThings, waterSigns})
+    res.render('water', elements.water)
 }) 
 app.get('/air', (req, res) => {
-    res.render('air', {airThings, airSigns})
+    res.render('air', elements)
 }) 
 app.get('/fire', (req, res) => {
-    res.render('fire', {fireThings, fireSigns})
+    res.render('fire', elements)
 }) 
 app.get('/earth', (req, res) => {
-    res.render('earth', {earthThings, earthSigns})
+    res.render('earth', elements)
 }) 
