@@ -11,8 +11,8 @@
     <h1>AIR</h1>
     <h2>Aquarius <br>Gemini <br>libra</h2>
     <ul>
-        <% .forEach( => {%>
-            <li><%= %></li>
+        <% traits.forEach(traits => {%>
+            <li><%= traits %></li>
         <%})%>
     </ul>
 </body>
@@ -22,6 +22,21 @@
         text-align: center;
         text-decoration: double;
         font-size: 50px;
+    }
+    h2{
+          font-size: 40px;
+    }
+
+    body{
+        background-color: rgba(7, 176, 248, 0.308);
+    }
+
+    li{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        font-size: 30px;
+        text-align: center;
     }
     h1{
         text-decoration: underline;
