@@ -6,9 +6,13 @@ const PORT = 8000
 //  define express routes???
 app.get('/.', (req, res) => {
     // console.log('Welcome nighthawks, we have been expecting you🎩')
-    res.send('Beam me up scotty! 🚀')
+    res.send('It works! ha ha, IT WORKS! I FINALLY invent something that works!')
 })
-app.get('/.', (req, res) => {
+app.get('/', (req, res) => {
+    // console.log('Welcome nighthawks, we have been expecting you🎩')
+    res.send('Never go against a Sicilian WHEN DEATH IS ON THE LINE!! HAHAHA!)
+})
+app.get('/', (req, res) => {
     // console.log('Welcome nighthawks, we have been expecting you🎩')
     res.send('Luke! i AM your Father')
 })
