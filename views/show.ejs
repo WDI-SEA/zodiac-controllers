@@ -1,0 +1,18 @@
+<a href="/">Back to Main</a>
+
+<h2><%= element.name %></h2>
+
+    <% element.signs.forEach(sign=> { %>
+        <h4>
+            <a href="/<%= element.name %>/<%= sign %>"><%= sign %></a>
+        </h4>
+        <% }) %>
+
+
+            <ul>
+                <%element.traits.forEach(trait=> { %>
+                    <li>
+                        <%= trait %>
+                    </li>
+                    <%}) %>
+            </ul>
