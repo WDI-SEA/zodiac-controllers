@@ -8,31 +8,30 @@ app.set('view engine', 'ejs')
 app.use(ejsLayouts)
 
 app.get('/', (req, res) => {
-    // res.send(`This is the home page!`)
     console.log(`This is the index page!`)
     res.render('index')
 })
 
+const waterTraits = ['Private', 'Mysterious', 'Psychic', 'Charming', 'Emotional', 'Sensitive']
 app.get('/water', (req, res) => {
-    // res.send(`This is the water page!`)
     console.log(`This is the water page!`)
     res.render('water')
 })
 
+const airTraits = ['Movement', 'Creativity', 'Action', 'Adventure', 'Exciting', 'Easily provoked']
 app.get('/air', (req, res) => {
-    // res.send(`This is the air page!`)
     console.log(`This is the air page!`)
-    res.render('air')
+    res.render('air', {traits: airTraits})
 })
 
+const fireTraits = ['Passionate', 'Strong emotions', 'Energetic', 'Accomplished', 'Interesting']
 app.get('/fire', (req, res) => {
-    // res.send(`This is the fire page!`)
     console.log(`This is the fire page!`)
     res.render('fire')
 })
 
+const earthTraits = ['Grounded', 'Helpful', 'Practical', 'Realistic', 'Materialistic', 'Dependable']
 app.get('/earth', (req, res) => {
-    // res.send(`This is the earth page!`)
     console.log(`This is the earth page!`)
     res.render('earth')
 })
