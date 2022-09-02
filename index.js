@@ -18,7 +18,7 @@ const elements = {
     fire: {
         name: "fire",
         signs: ["aries", "leo", "sagittarius"],
-        traits: ["passionate", "strong emotions", "tempermental", "energetic", "accompli,sed", "interesting"]
+        traits: ["passionate", "strong emotions", "tempermental", "energetic", "accomplished", "interesting"]
     },
     earth: {
         name: "earth",
@@ -43,25 +43,31 @@ app.get('/', (req, res) => {
 app.get('/air', (req, res) => {
     // console.log('Welcome nighthawks, we have been expecting you🎩')
     // res.send('AIR')
-    res.json(elements.air)
+    // DATA CHECK
+    // res.json(elements.air)
+    // TEMPLATE
+    res.render('show', {element: elements.air})
 })
 // home route = localhost:8000/
 // HTTP verb = GET    URL pattern = '/water'
 app.get('/water', (req, res) => {
     // console.log('Welcome nighthawks, we have been expecting you🎩')
-    res.send('WATER')
+    // res.send('WATER')
+    res.render('show', {element: elements.water})
 })
 // home route = localhost:8000/
 // HTTP verb = GET    URL pattern = '/fire'
 app.get('/fire', (req, res) => {
     // console.log('Welcome nighthawks, we have been expecting you🎩')
-    res.send('FIRE')
+    // res.send('FIRE')
+    res.render('show', {element: elements.fire})
 })
 // home route = localhost:8000/
 // HTTP verb = GET    URL pattern = '/earth'
 app.get('/earth', (req, res) => {
     // console.log('Welcome nighthawks, we have been expecting you🎩')
-    res.send('EARTH')
+    // res.send('EARTH')
+    res.render('show', {element: elements.earth})
 })
 
 // tell express to listen on a port for incoming http requests
