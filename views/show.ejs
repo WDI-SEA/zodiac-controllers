@@ -3,7 +3,7 @@
 <h3><%= element.name %></h3>
 
 <% element.signs.forEach(sign => { %>
-    <ul><%= sign %></ul>
+    <a href="<%= element.name %>/<%= sign %>"><%= sign %></a>
 <% }) %>
 
 <ul>

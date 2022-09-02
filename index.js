@@ -4,6 +4,7 @@ const app = express();
 const PORT = 8000;
 
 app.set('view engine', 'ejs');
+app.use(ejsExpressLayouts)
 
 // const waterTraits = ['PISCES', 'CANCER', 'SCORPIO', 'private', 'mysterious', 'psychic', 'charming', 'emotional', 'sensitive'];
 // const airTraits = ['AQUARIUS', 'GEMINI', 'LIBRA', 'movement', 'creativity', 'action', 'adventure', 'exciting', 'easily provoked'];
@@ -12,23 +13,23 @@ app.set('view engine', 'ejs');
 
 const elements = {
     water: {
-        name: "WATER",
-        signs: ['PISCES', 'CANCER', 'SCORPIO'],
+        name: "water",
+        signs: ['pisces', 'cancer', 'scorpio'],
         traits: ['private', 'mysterious', 'psychic', 'charming', 'emotional', 'sensitive']
     },
     air: {
-        name: "AIR",
-        signs: ['AQUARIUS', 'GEMINI', 'LIBRA'],
+        name: "air",
+        signs: ['aquarius', 'gemini', 'libra'],
         traits: ['movement', 'creativity', 'action', 'adventure', 'exciting', 'easily provoked']
     },
     fire: {
-        name: "FIRE",
-        signs: ['ARIES', 'LEO', 'SAGITTARIUS'],
+        name: "fire",
+        signs: ['aries', 'leo', 'sagittarius'],
         traits: ['passionate', 'strong emotions', 'temperamental', 'energetic', 'accomplished', 'interesting']
     },
     earth: {
-        name: "EARTH",
-        signs: ['TAURUS', 'VIRGO', 'CAPRICORN'],
+        name: "earth",
+        signs: ['taurus', 'virgo', 'capricorn'],
         traits: ['grounded', 'helpful', 'practical', 'realistic', 'materialistic', 'dependable']
     }
 }
