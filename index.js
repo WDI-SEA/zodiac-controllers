@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
 const waterTraits = ['Private', 'Mysterious', 'Psychic', 'Charming', 'Emotional', 'Sensitive']
 app.get('/water', (req, res) => {
     console.log(`This is the water page!`)
-    res.render('water')
+    res.render('water', {traits: waterTraits})
 })
 
 const airTraits = ['Movement', 'Creativity', 'Action', 'Adventure', 'Exciting', 'Easily provoked']
@@ -24,16 +24,16 @@ app.get('/air', (req, res) => {
     res.render('air', {traits: airTraits})
 })
 
-const fireTraits = ['Passionate', 'Strong emotions', 'Energetic', 'Accomplished', 'Interesting']
+const fireTraits = ['Passionate', 'Strong emotions', 'Tempermental', 'Energetic', 'Accomplished', 'Interesting']
 app.get('/fire', (req, res) => {
     console.log(`This is the fire page!`)
-    res.render('fire')
+    res.render('fire', {traits: fireTraits})
 })
 
 const earthTraits = ['Grounded', 'Helpful', 'Practical', 'Realistic', 'Materialistic', 'Dependable']
 app.get('/earth', (req, res) => {
     console.log(`This is the earth page!`)
-    res.render('earth')
+    res.render('earth', {traits: earthTraits})
 })
 
 
