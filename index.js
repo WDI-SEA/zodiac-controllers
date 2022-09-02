@@ -1,5 +1,6 @@
 // require packages
 const express = require('express')
+const expresEjsLayouts = require('express-ejs-layouts')
 
 // set up express app
 const app = express()
@@ -25,6 +26,7 @@ const earth = {
 
 // configure app to use ejs
 app.set('view engine', 'ejs')
+app.use(expresEjsLayouts)
 
 // ROUTES
 app.get('/', (req, res) => {
