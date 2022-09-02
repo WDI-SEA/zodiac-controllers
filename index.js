@@ -32,23 +32,27 @@ app.get('/', (req, res) => {
     res.render('index.ejs')
 })
 
-app.get('/water', (req, res) => {
-    res.send('water')
+app.get('/air', (req, res) => {
+    // res.send('water')
+    res.render('air.ejs', air)
 })
 
-app.get('/air', (req, res) => {
-    res.send('air')
+app.get('/water', (req, res) => {
+    // res.send('air')
+    res.render('water.ejs', water)
 })
 
 app.get('/fire', (req, res) => {
-    res.send('fire')
+    // res.send('fire')
+    res.render('fire', fire)
 })
 
 app.get('/earth', (req, res) => {
-    res.send('earth')
+    // res.send('earth')
+    res.render('earth', earth)
 })
 
 // PORT LISTENER
 app.listen(PORT, () => {
-    console.log('port', PORT)
+    console.log('Soft rock, with less talk. On port', PORT)
 })

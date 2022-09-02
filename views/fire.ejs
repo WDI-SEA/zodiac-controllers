@@ -1,0 +1,21 @@
+<%- include('./layout.ejs') %>
+
+<h2>Fire</h2>
+
+<h3>Signs</h3>
+
+<ul>
+    <% signs.forEach(sign => { %>
+        <li><%= sign %></li>
+    <% }) %>
+</ul>
+
+<h3>Traits</h3>
+
+<ul>
+    <% traits.forEach(trait => { %>
+        <li><%= trait %></li>
+    <% }) %>
+</ul>
+
+<a href="/">Home</a>
