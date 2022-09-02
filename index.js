@@ -1,40 +1,7 @@
-const express = require('express')
+const express = require("express")
 const app = express()
-const ejsLayouts = require('express-ejs-layouts')
-const PORT = 3000
 
-// CONFIGURE APP TO USE EJS
-app.set('view engine', 'ejs')
-app.use(ejsLayouts)
-
-app.get('/', (req, res) => {
-    console.log(`This is the index page!`)
-    res.render('index')
-})
-
-const waterTraits = ['Private', 'Mysterious', 'Psychic', 'Charming', 'Emotional', 'Sensitive']
-app.get('/water', (req, res) => {
-    console.log(`This is the water page!`)
-    res.render('water', {traits: waterTraits})
-})
-
-const airTraits = ['Movement', 'Creativity', 'Action', 'Adventure', 'Exciting', 'Easily provoked']
-app.get('/air', (req, res) => {
-    console.log(`This is the air page!`)
-    res.render('air', {traits: airTraits})
-})
-
-const fireTraits = ['Passionate', 'Strong emotions', 'Tempermental', 'Energetic', 'Accomplished', 'Interesting']
-app.get('/fire', (req, res) => {
-    console.log(`This is the fire page!`)
-    res.render('fire', {traits: fireTraits})
-})
-
-const earthTraits = ['Grounded', 'Helpful', 'Practical', 'Realistic', 'Materialistic', 'Dependable']
-app.get('/earth', (req, res) => {
-    console.log(`This is the earth page!`)
-    res.render('earth', {traits: earthTraits})
-})
+const PORT = 3000 
 
 const elements = {
     air: {
@@ -59,8 +26,49 @@ const elements = {
     }
 }
 
-// LISTENER AT THE BOTTOM
-app.listen(PORT, () => {
-    console.log(`You're tuned into port ${PORT}`)
+// SET THE VIEW ENGINE
+app.set("view engine", "ejs")
+
+// home route = localhost:3000/
+// HTTP verb = GET   URL pattern = "/"
+app.get("/", (req, res) => {
+    // res.send("This is the home page")
+    res.render("index")
 })
 
+// AIR route = localhost:3000/air
+// HTTP verb = GET   URL pattern = "/air"
+app.get("/air", (req, res) => {
+    // ROUTE CHECK
+    // res.send("AIR")
+    // DATA CHECK
+    // res.json(elements.air)
+    // TEMPLATE
+    res.render("show", {element: elements.air})
+})
+
+// WATER route = localhost:3000/water
+// HTTP verb = GET   URL pattern = "/water"
+app.get("/water", (req, res) => {
+    // res.send("WATER")
+    res.render("show", {element: elements.water})
+})
+
+// FIRE route = localhost:3000/fire
+// HTTP verb = GET   URL pattern = "/fire"
+app.get("/fire", (req, res) => {
+    // res.send("FIRE")
+    res.render("show", {element: elements.fire})
+})
+
+// EARTH route = localhost:3000/earth
+// HTTP verb = GET   URL pattern = "/earth"
+app.get("/earth", (req, res) => {
+    // res.send("EARTH")
+    res.render("show", {element: elements.earth})
+})
+
+
+app.listen(PORT, () => {
+    console.log(`Cicadas singing on port ${PORT}`)
+})
