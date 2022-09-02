@@ -1,3 +1,13 @@
 <%- include('partials/header.ejs') %>
-
+<a href="/">HOME</a>
+<ul>
+    <% fireSigns.forEach(sign => { %>
+        <li><%= sign %> </li>
+    <% }) %>
+</ul>
+<ul>
+    <% fireThings.forEach(thing => { %>
+        <li><%= thing %> </li>
+    <% }) %>
+</ul>
 <%- include('partials/footer.ejs') %>
