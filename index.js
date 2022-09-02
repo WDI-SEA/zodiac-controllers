@@ -6,19 +6,19 @@ const app = express();
 const PORT = 8000
 // DEFINE express routes
 app.get('/', (req, res) => {
-    res.send(`<h1>Zodiac!</h1>`)
+    res.render(`layout.ejs`)
 })
 app.get('/water', (req, res) => {
-    res.send(`<h1>Zodiac!</h1>`)
+    res.render(`water.ejs`)
 })
 app.get('/air', (req, res) => {
-    res.send(`<h1>Zodiac!</h1>`)
+    res.render(`air.ejs`)
 })
 app.get('/fire', (req, res) => {
-    res.send(`<h1>Zodiac!</h1>`)
+    res.render(`fire.ejs`)
 })
 app.get('/earth', (req, res) => {
-    res.send(`<h1>Zodiac!</h1>`)
+    res.render(`earth.ejs`)
 })
 
 // tell express to LISTEN
