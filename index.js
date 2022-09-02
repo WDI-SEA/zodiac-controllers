@@ -4,7 +4,6 @@ const app = express();
 const PORT = 8000;
 
 app.set('view engine', 'ejs');
-app.use(ejsExpressLayouts)
 
 // const waterTraits = ['PISCES', 'CANCER', 'SCORPIO', 'private', 'mysterious', 'psychic', 'charming', 'emotional', 'sensitive'];
 // const airTraits = ['AQUARIUS', 'GEMINI', 'LIBRA', 'movement', 'creativity', 'action', 'adventure', 'exciting', 'easily provoked'];
