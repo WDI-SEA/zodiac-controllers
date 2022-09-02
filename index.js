@@ -8,18 +8,22 @@ const PORT = 8000
 
 // VARIABLES
 const air = {
+    name: 'Air',
     signs: ['Aquarius', 'Gemini', 'Libra'],
     traits: ['movement', 'creativity', 'action', 'adventure', 'exciting', 'easily provoked']
 }
 const water = {
+    name: 'Water',
     signs: ['Pisces', 'Cancer', 'Scorpio'],
     traits: ['private', 'mysterious', 'pyshic', 'charming', 'emotional', 'sensitive']
 }
 const fire = {
+    name: 'Fire',
     signs: ['Aries', 'Leo', 'Sagittarius'],
     traits: ['passionate', 'strong emotions', 'temperamental', 'energetic', 'accomplished', 'interesting']
 }
 const earth = {
+    name: 'Earth',
     signs: ['Taurus', 'Virgo', 'Capricorn'],
     traits: ['grounded', 'helpful', 'practical', 'realistic', 'materialistic', 'dependable']
 }
@@ -27,10 +31,10 @@ const earth = {
 // configure app to use ejs
 app.set('view engine', 'ejs')
 app.use(expresEjsLayouts)
-app.use('/air', require('./controllers/air.js'))
-app.use('/water', require('./controllers/water.js'))
-app.use('/fire', require('./controllers/fire.js'))
-app.use('/earth', require('./controllers/earth.js'))
+app.use('/Air', require('./controllers/air.js'))
+app.use('/Water', require('./controllers/water.js'))
+app.use('/Fire', require('./controllers/fire.js'))
+app.use('/Earth', require('./controllers/earth.js'))
 app.use(express.static('public'))
 
 // ROUTES
@@ -39,24 +43,24 @@ app.get('/', (req, res) => {
     res.render('index.ejs')
 })
 
-app.get('/air', (req, res) => {
+app.get('/Air', (req, res) => {
     // res.send('water')
-    res.render('air.ejs', air)
+    res.render('element.ejs', air)
 })
 
-app.get('/water', (req, res) => {
+app.get('/Water', (req, res) => {
     // res.send('air')
-    res.render('water.ejs', water)
+    res.render('element.ejs', water)
 })
 
-app.get('/fire', (req, res) => {
+app.get('/Fire', (req, res) => {
     // res.send('fire')
-    res.render('fire', fire)
+    res.render('element.ejs', fire)
 })
 
-app.get('/earth', (req, res) => {
+app.get('/Earth', (req, res) => {
     // res.send('earth')
-    res.render('earth', earth)
+    res.render('element.ejs', earth)
 })
 
 // PORT LISTENER

@@ -1,10 +1,10 @@
-<h2>Earth</h2>
+<h2><%= name %></h2>
 
 <h3>Signs</h3>
 
 <ul>
     <% signs.forEach(sign => { %>
-        <li><a href="/earth/<%= sign %>"><%= sign %></a></li>
+        <li><a href="/<%= name %>/<%= sign %>"><%= sign %></a></li>
     <% }) %>
 </ul>
 
