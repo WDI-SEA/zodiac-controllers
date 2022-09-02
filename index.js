@@ -2,25 +2,47 @@ const express = require('express')
 const app = express()
 const PORT = 8000
 
-const air = ['Aquarius', 'Gemini', 'Libra']
-const water = ['Pisces', 'Cancer', 'Scorpio']
-const fire = ['Aries', 'Leo', 'Sagittarius']
-const earth = ['Taurus', 'Virgo', 'Capricorn']
+const elements = {
+    air: {
+        name: "air",
+        signs: ["aquarius","gemini","libra"],
+        traits: ["movement", "creativity", "action", "adventure","exciting", "easily provked"]
+    },
+    water: {
+        name: "water",
+        signs: ["pisces", "cancer", "scorpipo"],
+        traits: ["private", "mysterious", "pyshic", "charming", "emotional", "sensitive"]
 
-app.get('/Home', (req,res) => {
-    res.render("index.ejs")
+    },
+    fire: {
+        name: "fire",
+        signs: ["aries", "leo", "sagittarius"],
+        traits: ["passionate", "strong emotions", "tempermental", "energetic", "accomplished", "interesting"]
+    },
+    earth:{
+        name: "earth",
+        signs: ["taurus", "virgo", "capricorn"],
+        traits: ["grounded", "helpful", "practical", "realistic", "materialistic", "dependable"]
+    }
+}
+// SET THE VIEW ENGINE
+app.set("view engine", "ejs");
+
+
+app.get('/', (req,res) => {
+    res.render("index")
 })
 app.get('/water', (req,res) => {
-    res.render("water.ejs",{water:water})
+    res.render("shows", {element: elements.water})
 })
 app.get('/air', (req,res) => {
-    res.render("air.ejs",{air:air})
+    res.render("shows", {element: elements.air})
 })
 app.get('/fire', (req,res) => {
-    res.render("fire.ejs",{fire:fire})
+    res.render("shows", {element: elements.fire})
 })
 app.get('/earth', (req,res) => {
-    res.render("earth.ejs",{earth:earth})
+    res.render("shows", {element: elements.earth})
 })
 
 app.listen(PORT, () => {

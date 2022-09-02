@@ -1,0 +1,9 @@
+
+<%-include("layout.ejs")%>
+
+<%= element.name %>
+<ul>
+<% element.traits.forEach(trait => {%>
+   <li><%= trait %></li>
+<% })%>
+</ul>
