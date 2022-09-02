@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fire</title>
+    </head>
+    <body>
+        <nav><a href="./">Home</a></nav>
+        <h1>Fire Signs</h1>
+            <h2>
+                
+                <%= signs %>
+            
+            </h2>
+            <ul>
+                <% traits.forEach(trait=>{ %>
+                    <li><%= trait %></li>
+                <% }) %>
+
+
+            </ul>
+    </body>
+
+</html>
