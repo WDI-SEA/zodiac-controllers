@@ -14,15 +14,15 @@ app.get("/water", (req, res) =>    // water
 })
 app.get("/earth", (req, res) =>    // earth
 {
-    res.send("earth")
+    res.render("earth-zodiac", {traits: ["grounded", "helpful", "practical", "realistic", "materialistic", "dependable"]});
 })
 app.get("/fire", (req, res) =>    // fire
 {
-    res.send("fire")
+    res.render("fire-zodiac", {traits: ["passionate", "strong emotions", "temperamental", "energetic", "accomplished", "interesting"]});
 })
 app.get("/air", (req, res) =>    // air
 {
-    res.send("air")
+    res.render("air-zodiac", {traits: ["movement", "creativity", "action", "adventure", "exciting", "easily provoked"]});
 })
 
 // Web application listening
