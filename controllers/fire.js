@@ -13,15 +13,15 @@ router.get("/", (req, res) =>    // fire
 })
 router.get("/aries", (req, res) =>
 {
-    res.render("sign", {path: "../imgs/aries.png"});
+    res.render("sign", {sign: "Aries"});
 })
 router.get("/leo", (req, res) =>
 {
-    res.render("sign", {path: "../imgs/leo.png"});
+    res.render("sign", {sign: "Leo"});
 })
 router.get("/sagittarius", (req, res) =>
 {
-    res.render("sign", {path: "../imgs/sagittarius.png"});
+    res.render("sign", {sign: "Sagittarius"});
 })
 
 module.exports = router;
