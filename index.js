@@ -1,7 +1,37 @@
 const express = require("express");
+const ejsLayouts = require("express-ejs-layouts");
 const app = express();
 const PORT = 8000;
+
+const elements = {
+    water: 
+    {
+        name: "Water",
+        signs: ["Pisces", "Cancer", "Scorpio"],
+        traits: ["private", "mysterious", "psychic", "charming", "emotional", "sensitive"]
+    },
+    earth: 
+    {
+        name: "Earth",
+        signs: ["Taurus", "Virgo", "Capricorn"],
+        traits: ["grounded", "helpful", "practical", "realistic", "materialistic", "dependable"]
+    },
+    fire: 
+    {
+        name: "Fire",
+        signs: ["Aries", "Leo", "Sagittarius"],
+        traits: ["passionate", "strong emotions", "temperamental", "energetic", "accomplished", "interesting"]
+    },
+    air: 
+    {
+        name: "Air",
+        signs: ["Aquarius", "Gemini", "Libra"],
+        traits: ["movement", "creativity", "action", "adventure", "exciting", "easily provoked"]
+    }
+}
+
 app.set("view engine", "ejs");    // Set view engine to EJS
+app.use(ejsLayouts);
 
 // Routes
 app.get("/", (req, res) =>
@@ -10,19 +40,19 @@ app.get("/", (req, res) =>
 })
 app.get("/water", (req, res) =>    // water
 {
-    res.render("water-zodiac", {traits: ["private", "mysterious", "psychic", "charming", "emotional", "sensitive"]});
+    res.render("element-zodiacs", {element: elements.water});
 })
 app.get("/earth", (req, res) =>    // earth
 {
-    res.render("earth-zodiac", {traits: ["grounded", "helpful", "practical", "realistic", "materialistic", "dependable"]});
+    res.render("element-zodiacs", {element: elements.earth});
 })
 app.get("/fire", (req, res) =>    // fire
 {
-    res.render("fire-zodiac", {traits: ["passionate", "strong emotions", "temperamental", "energetic", "accomplished", "interesting"]});
+    res.render("element-zodiacs", {element: elements.fire});
 })
 app.get("/air", (req, res) =>    // air
 {
-    res.render("air-zodiac", {traits: ["movement", "creativity", "action", "adventure", "exciting", "easily provoked"]});
+    res.render("element-zodiacs", {element: elements.air});
 })
 
 // Web application listening
