@@ -13,16 +13,17 @@ const fireSigns = ['Aries', 'Leo', 'Sagittarius']
 const fireTraits = ['passionate', 'strong emotions', 'tempermental', 'energetic', 'accomplished', 'interesting']
 const earthSigns = ['Taurus', 'Virgo', 'Capricorn']
 const earthTraits = ['grounded', 'helpful', 'practical', 'realistic', 'materialistic', 'dependable']
+
 //set routes
 app.get('/', (req,res) =>{
     res.render('index.ejs')
 })
 app.get('/water', (req,res) =>{
-    res.render('water.ejs')
+    res.render('water.ejs', {signs: waterSigns, traits: waterTraits})
 })
 
 app.get('/air', (req,res) =>{
-    res.render('air.ejs')
+    res.render('air.ejs',  {signs: airSigns, traits: airTraits})
 })
 
 app.get('/fire', (req,res) =>{
