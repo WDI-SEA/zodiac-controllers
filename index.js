@@ -1,8 +1,10 @@
 const express = require('express')
 const app = express()
+const ejsLayouts = require('express-ejs-layouts')
 const PORT = 8000
 // // configure for EJS
 app.set('view engine', 'ejs')
+app.use(ejsLayouts)
 
 // need navi links
 app.get('/', (req, res)=>{
@@ -14,7 +16,10 @@ const waterTraits = ["private","mysterious", "pyschic","charming", "emotional", 
 const fireTraits = ["passionate", "strong emotions", "tempermental", "energetic", "accomplished", "interesting"]
 const earthTraits = ["grounded", "helpful", "practical", "realistic", "materialstic", "dependable"]
 
-
+//Navigation Page
+app.get('/', (req, res)=>{
+    res.render('layout')
+})
 // water
 app.get('/water', (req, res) => {
     // res.render('water')
@@ -36,7 +41,7 @@ app.get('/earth', (req, res)=>{
 
 
 
-
+// LISTENER ALWAYS GOES AT THE BOTTOM
  app.listen(PORT, ()=> {
     console.log(`you are live on channel ${8000}`)
  })
