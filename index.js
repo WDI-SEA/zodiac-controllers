@@ -20,19 +20,19 @@ app.get("/", (req, res) => {
 })
 
 app.get("/water", (req, res) => {
-    res.render("water", {signs: waterSigns, water: waterTraits})
+    res.render("water", {signs: waterSigns, traits: waterTraits})
 })
 
 app.get("/air", (req, res) => {
-    res.render("air", {signs: airSigns, air: airTraits})
+    res.render("air", {signs: airSigns, traits: airTraits})
 })
 
 app.get("/fire", (req, res) => {
-    res.render("fire", {signs: fireSigns, fire: fireTraits})
+    res.render("fire", {signs: fireSigns, traits: fireTraits})
 })
 
 app.get("/earth", (req, res) => {
-    res.render("earth", {signs: earthSigns, earth: earthTraits})
+    res.render("earth", {signs: earthSigns, traits: earthTraits})
 })
 
 
