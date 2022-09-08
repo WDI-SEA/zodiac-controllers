@@ -23,11 +23,19 @@
 | URL Pattern  | Content |
 | ------------- | ------------- |
 | /  | 3 navigation links (/water, /air, /fire, /earth) |
-| /water | list of water signs and relevant traits from the graphic above  |
-| /air | list of air signs and relevant traits from the graphic above  |
-| /fire | list of fire signs and relevant traits from the graphic above  |
-| /earth | list of earth sign and relevant traits from the graphic above  |
+| /water | list of water signs and relevant traits from the graphic 
+above  |[Private, Mysterious, Psychic, Charming, Emotional, Sensitive]
 
+| /air | list of air signs and relevant traits from the graphic 
+
+above  |[Movement, Creativity, Action, Adventure, Exciting, Easily Provoked]
+
+| /fire | list of fire signs and relevant traits from the graphic 
+
+above  |[Passionate, Strong Emotions, Tempermental, Energetic, Accomplished, Interesting]
+
+| /earth | list of earth sign and relevant traits from the graphic above  |
+[Grounded, Helpful, Practical, Realistic, Materialistic, Dependable]
 ---
 
 ## Part 2: Controllers
@@ -41,12 +49,31 @@
 | /water/cancer | image of cancer symbol  |
 | /water/scorpio | image of scorpio symbol  |
 | /water/pisces | image of pisces symbol  |
+
+[Private, Mysterious, Psychic, Charming, Emotional, Sensitive]
+
+
 | /air/gemini | image of gemini symbol  |
 | /air/libra | image of libra symbol  |
 | /air/aquarius | image of aquarius symbol |
+
+[Movement, Creativity, Action, Adventure, Exciting, Easily Provoked]
+
+
 | /fire/leo | image of leo symbol  |
 | /fire/aries | image of aries symbol  |
 | /fire/sagittarius | image of sagittarius symbol |
+
+
+[Passionate, Strong Emotions, Tempermental, Energetic, Accomplished, Interesting]
+
 | /earth/taurus | image of taurus symbol  |
 | /earth/virgo | image of virgo symbol  |
 | /earth/capricorn | image of capricorn symbol |
+
+[Grounded, Helpful, Practical, Realistic, Materialistic, Dependable]
+
+
+Template Tag Names <%= ALMIGHTY SQUID injects data onto the page <% FLOUNDER allows you to write js in your html (does stuff but doesn't show stuff) <%- STINGRAY "includes" where we include an ejs file inside another file
+
+%> CLOSING TIME FLOUNDER required to stop the javascripting

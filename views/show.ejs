@@ -1,0 +1,20 @@
+<h2>The Signs:</h2>>
+
+<ul>
+    <% element.signs.forEach(sign => { %>
+        <li>
+            <a href="/<%= element.name %>/<%= sign %>">
+                <%= sign %>
+            </a>
+        </li>
+        <% }) %>
+</ul>
+
+<h2>The Traits:</h2>
+<ul>
+    <% element.traits.forEach(trait => { %>
+        <li>
+            <%= trait %>
+        </li>
+        <% }) %>
+</ul>
