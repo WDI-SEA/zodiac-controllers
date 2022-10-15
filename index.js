@@ -1,0 +1,43 @@
+//import express
+const express = require('express')
+const PORT=3000
+
+
+//create an instance of express
+const app = express()
+
+//MIDDLEWARE
+app.set('view engine','ejs')
+
+
+//HOME route
+app.get("/", (req,res)=>{
+    res.send("This is the Home Page!")
+    
+})
+
+app.get("/water", (req,res)=>{
+    res.send("This is the water sign Page!")
+    
+})
+
+app.get("/air", (req,res)=>{
+    res.send("This is the air sign Page!")
+    
+})
+
+app.get("/fire", (req,res)=>{
+    res.send("This is the fire sign Page!")
+    
+})
+
+app.get("/earth", (req,res)=>{
+    res.send("This is the earth sign Page!")
+    
+})
+
+
+//indicate a port to run the server on
+app.listen(PORT, ()=>{
+    console.log(`HELLO FROM PORT ${PORT}`)
+})
