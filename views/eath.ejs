@@ -7,12 +7,20 @@
     <title>Earth Element</title>
 </head>
 <body>
-    <h1>Earth Element</h1>
-    <h3>Zodiac Signs</h3>
+    <h1>Earth Element 🍃</h1>
+    <h2>Zodiac Signs</h2>
     <ul>
-        <li>Taurus</li>
-        <li>Virgo</li>
-        <li>Capricorn</li>
+        <li>Taurus ♉️</li>
+        <li>Virgo ♍️</li>
+        <li>Capricorn ♑️</li>
+    </ul>
+
+    <h2>Sign Traits:</h2>
+    <ul>
+        <% earthTraits.forEach(element=>{%>
+            <li><%=element %></li>
+        <% }) %>
+        
     </ul>
 </body>
 </html>

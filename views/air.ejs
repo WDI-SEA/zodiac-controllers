@@ -7,12 +7,20 @@
     <title>Air Element</title>
 </head>
 <body>
-    <h1>Air Element</h1>
-    <h3>Zodiac Signs</h3>
+    <h1>Air Element 🌬</h1>
+    <h2>Zodiac Signs</h2>
     <ul>
-        <li>Aquarius</li>
-        <li>Gemini</li>
-        <li>Libra</li>
+        <li>Aquarius ♒️</li>
+        <li>Gemini ♊️</li>
+        <li>Libra ♎️</li>
+    </ul>
+
+    <h2>Sign Traits:</h2>
+    <ul>
+        <% airTraits.forEach(element=>{%>
+            <li><%=element %></li>
+        <% }) %>
+        
     </ul>
 </body>
 </html>
