@@ -1,0 +1,19 @@
+<body>
+</body>
+<h1><%= title %> Signs</h1>
+<img src="./public/images/water.jpeg">
+      <ul>
+        <% signs.forEach(t => { %>
+            <div>
+                <li style="font-size: 20px"> <%= t %> </li>
+            </div>
+            <% }) %>
+    </ul>
+    <hr>
+    <ul>
+      <% traits.forEach(t => { %>
+          <div>
+              <li style="font-size: 20px"> <%= t %> </li>
+          </div>
+          <% }) %>
+        </ul>
