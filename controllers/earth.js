@@ -7,15 +7,21 @@ router.get('/', (req,res)=>{
 })
 
 router.get('/taurus', (req,res)=>{
-    res.render('taurus.ejs')
+    const url = "https://www.thesun.co.uk/wp-content/uploads/2021/10/HOROSCOPE-TAURUS.png?w=750"
+    const sign = 'taurus'
+    res.render('images.ejs', {url, sign})
 })
 
 router.get('/virgo', (req,res)=>{
-    res.render('virgo.ejs')
+    const url = "https://www.thesun.co.uk/wp-content/uploads/2021/10/HOROSCOPE-VIRGO.png?w=750"
+    const sign = 'virgo'
+    res.render('images.ejs', {url, sign})
 })
 
 router.get('/capricorn', (req,res)=>{
-    res.render('capricorn.ejs')
+    const url = "https://www.thesun.co.uk/wp-content/uploads/2021/10/HOROSCOPE-CAPRICORN.png?w=750"
+    const sign = 'capricorn'
+    res.render('images.ejs', {url, sign})
 })
 
 
