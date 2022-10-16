@@ -7,7 +7,7 @@ if(currentLocation.slice(21,40) == '/Fire') menuItem[3].className = 'w3-bar-item
 
 if(currentLocation.slice(21,40) == '/Air')menuItem[2].className = 'w3-bar-item w3-button w3-hover-pink w3-pink'
 
-if(currentLocation.slice(21,40) == '/Water')menuItem[1].className = 'w3-bar-item w3-button w3-hover-blue w3-blue'
+if(currentLocation.slice(21,40) == '/Water' || currentLocation.slice(21,40) == '/Water/Taurus' || currentLocation.slice(21,40) == '/Water/Virgo' || currentLocation.slice(21,40) == '/Water/Capricorn' )menuItem[1].className = 'w3-bar-item w3-button w3-hover-blue w3-blue'
 
 if(currentLocation.slice(21,40) == '/')menuItem[0].className = 'w3-bar-item w3-button w3-hover-dark-grey w3-dark-grey'
 
