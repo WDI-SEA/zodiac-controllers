@@ -4,9 +4,21 @@ const app = express()
 
 const PORT = 3000
 
+const ejsLayouts = require('express-ejs-layouts')
+
 
 // MIDDLEWARE
 app.set('view engine', 'ejs')
+
+app.use(ejsLayouts)
+
+
+
+// CONTROLLERS MIDDLEWARE
+app.use('/water', require('./controllers/water.js'))
+app.use('/air', require('./controllers/air.js'))
+app.use('/fire', require('./controllers/fire.js'))
+app.use('/earth', require('./controllers/earth.js'))
 
 
 
@@ -14,8 +26,6 @@ app.set('view engine', 'ejs')
 // 4 navigation links (/water, /air, /fire, /earth)
 app.get('/', (req, res) => {
     // res.send('Hello World')
-
-
 
     res.render('index.ejs', 
     {
@@ -25,58 +35,6 @@ app.get('/', (req, res) => {
 
 })
 
-// WATER ROUTE
-// list of water signs and relevant traits from the graphic above
-app.get('/water', (req, res) => {
-
-    // res.send('Hello Water')
-
-
-    res.render('water.ejs', 
-    {
-        traits: ['private', 'mysterious', 'psychic', 'charming', 'emotional', 'sensitive']
-    })
-
-
-})
-
-// AIR ROUTE
-// list of air signs and relevant traits from the graphic above
-app.get('/air', (req, res) => {
-    // res.send('Hello Air')
-
-
-    res.render('air.ejs', 
-    {
-        traits: ['movement', 'creativity', 'action', 'adventure', 'exciting', 'easily provoked']
-    })
-})
-
-
-// FIRE ROUTE
-// list of fire signs and relevant traits from the graphic above
-app.get('/fire', (req, res) => {
-    // res.send('Hello Fire')
-
-
-    res.render('fire.ejs', 
-    {
-        traits: ['passionate', 'strong emotions', 'temperamental', 'energetic', 'accomplished', 'interesting']
-    })
-})
-
-
-// EARTH ROUTE
-// list of earth sign and relevant traits from the graphic above
-app.get('/earth', (req, res) => {
-    // res.send('Hello Earth')
-
-
-    res.render('earth.ejs', 
-    {
-        traits: ['grounded', 'helpful', 'practical', 'realistic', 'materialistic', 'dependable']
-    })
-})
 
 
 
