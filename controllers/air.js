@@ -1,3 +1,4 @@
+const e = require('express')
 const express = require('express')
 
 const router = express.Router()
@@ -16,19 +17,23 @@ router.get('/', (req, res) => {
 })
 
 
+router.get('/:zodiac', (req, res) => {
 
-router.get('/gemini', (req, res) => {
-    res.render('air/gemini.ejs')
+    let context = {}
+
+    if(req.params.zodiac === 'gemini'){
+        context.url = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Gemini_symbol_%28bold%29.svg/1200px-Gemini_symbol_%28bold%29.svg.png"
+    
+    } else if(req.params.zodiac === 'libra'){
+        context.url = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Libra_symbol_%28bold%29.svg/1200px-Libra_symbol_%28bold%29.svg.png"
+
+    } else if(req.params.zodiac === 'aquarius'){
+        context.url = "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Aquarius_symbol_%28bold%29.svg/1200px-Aquarius_symbol_%28bold%29.svg.png"
+    }
+    
+    res.render('img.ejs', context)
 })
 
 
-router.get('/libra', (req, res) => {
-    res.render('air/libra.ejs')
-})
-
-
-router.get('/aquarius', (req, res) => {
-    res.render('air/aquarius.ejs')
-})
 
 module.exports = router

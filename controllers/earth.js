@@ -18,20 +18,24 @@ router.get('/', (req, res) => {
 
 
 
+router.get('/:zodiac', (req, res) => {
 
-router.get('/taurus', (req, res) => {
-    res.render('earth/taurus.ejs')
+    let context = {}
+
+    if(req.params.zodiac === 'capricorn'){
+        context.url = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Cancer_symbol_%28bold%29.svg/1200px-Cancer_symbol_%28bold%29.svg.png"
+    
+    } else if(req.params.zodiac === 'taurus'){
+        context.url = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Taurus_symbol_%28bold%29.svg/1200px-Taurus_symbol_%28bold%29.svg.png"
+
+    } else if(req.params.zodiac === 'virgo'){
+        context.url = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Virgo_symbol_%28bold%29.svg/1200px-Virgo_symbol_%28bold%29.svg.png"
+    }
+    
+    res.render('img.ejs', context)
 })
 
 
-router.get('/virgo', (req, res) => {
-    res.render('earth/virgo.ejs')
-})
-
-
-router.get('/capricorn', (req, res) => {
-    res.render('earth/capricorn.ejs')
-})
 
 
 module.exports = router
