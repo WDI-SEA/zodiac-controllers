@@ -14,21 +14,15 @@ app.use(expressLayouts);
 app.listen(port,()=>{
     console.log("Houston, we don't have a problem!")
 })
-app.get("/water", (req,res)=>{
-    res.render("fire" , {content:["Charming","Emotional","Private","Mysterious"]})
-})
-app.get("/air", (req,res)=>{
-res.render("air" ,{content:["movement", "creatvity","action","adventure"]})
-})
-app.get("/earth", (req,res)=>{
-res.render("earth",{content:["Grounded","Helpful","Practical","Realistic"]})
-})
-app.get("/fire", (req,res)=>{
-    res.render("fire" , {content:["Passionate", "Strong emotions","Temperamental","Accomplished"]})
-    })
     app.get('/', function(req, res) {
-        res.render('index', {link: '/fire'});
+        res.render('index');
       });
+      app.use('/fire', require('./controllers/fire.ejs'))
+      app.use('/water', require('./controllers/water.ejs'))
+      app.use('/air', require('./controllers/air.ejs'))
+      app.use('/earth', require('./controllers/earth.ejs'))
+
+
 
 
 

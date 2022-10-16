@@ -1,6 +1,11 @@
-<%-contentFor('body')%>
+<h1>Signs</h1>
 <ul>
-
+    <% signs=signs.map(ele=>{%>
+        <li><a href="/earth/<%=ele%>"><%= ele %></a></li> 
+        <%})%>
+</ul>
+<h1>Traits</h1>
+<ul>
     <% content=content.map(ele=>{%>
         <li><%= ele %></li> 
         <%})%>
