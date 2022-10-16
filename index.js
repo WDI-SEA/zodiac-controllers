@@ -38,5 +38,5 @@ app.get("/earth", (req, res)=>{
 })
 
 app.listen(PORT, ()=>{
-    console.log(`It is connected to ${PORT}`)
+    console.log(`It is connected${PORT}`)
 })
