@@ -2,8 +2,14 @@ const express = require('express')
 const app = express()
 const ejsLayouts = require('express-ejs-layouts')
 
+//Middlerware:
 app.set('view engine', 'ejs')
 app.use(ejsLayouts);
+//Constrollers Middlerware:
+app.use('/air', require('./controllers/air.js'))
+app.use('/earth', require('./controllers/earth.js'))
+app.use('/fire', require('./controllers/fire.js'))
+app.use('/water', require('./controllers/water.js'))
 
 const PORT = 3000
 
@@ -12,23 +18,6 @@ app.get('/', (req,res)=>{
     // res.send("Hello This is the Home page") //For Testing
     res.render('index.ejs')
 })
-
-app.get('/air', (req,res)=>{
-    res.render('air.ejs', {airTraits: ['Movement', 'Creativity', 'Action', 'Adventure', 'Exciting', 'Easily Provocked']})
-})
-
-app.get('/water', (req,res)=>{
-    res.render('water.ejs', {waterTraits: ['Private', 'Mysterious', 'Pychic', 'Charming', 'Emotional', 'Sensitive']})
-})
-
-app.get('/fire', (req,res)=>{
-    res.render('fire.ejs', {fireTraits: ['Passionate', 'Strong Emotions', 'Temperamental', 'Energetic', 'Accomplished', 'Interesting']})
-})
-
-app.get('/earth', (req,res)=>{
-    res.render('earth.ejs', {earthTraits: ['Grounded', 'Helpful', 'Practical', 'Realistic', 'Materialistic', 'Dependable']})
-})
-
 
 
 app.listen(PORT, ()=>console.log("I'm Listening.."))
