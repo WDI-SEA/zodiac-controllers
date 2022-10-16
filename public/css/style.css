@@ -7,3 +7,10 @@ h1{
     padding-left: 20px;
 }
 
+.homepageImage{  
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+  height:400px;
+}
