@@ -6,28 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Earth</title>
     <style>
-        li{
-            margin: 40px;
-        }
-    </style>
+        a:link {
+          text-decoration: none;
+         
+          }
+   
+          a:visited {
+          text-decoration: none;
+          }   
+          
+         a:hover {
+           color: rgb(8, 3, 141);
+           font-size:200%
+         }
+     </style>
+  
 </head>
-<body  style="text-align:center; background-color:rgb(14, 162, 81); font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
-    <%- include ('./header.ejs') %>
-    <h1 style=" margin-top: 100px; font-size: 60px;" >Earth signs 🌏 </h1>
-    <hr>
-    <ul style="list-style-type: none; font-size: 30px;">
-        <li>Taurus ♉︎ </li>
-        <li>Virgo ♍︎ </li>
-        <li>Capricorn ♑︎ </li>
-
+<body >
+    <h2  >Earth signs 🌏 </h2>
+    <ul style="list-style-type: none ;">
+        <li><a href="/earth/Taurus" > Taurus ♉︎  </a></li>
+        <li><a  href="/earth/Virgo" > Virgo ♍︎ </a></li>
+        <li><a  href="/earth/Capricorn"> Capricorn ♑︎ </a></li>
     </ul>
-    <hr>
-    
-    <h2 style="font-size: 60px;">Earth Traits</h2>
-    <hr>
-    <ul style="list-style-type: none; font-size: 30px; ">
+    <h2 >Earth Traits</h2>
+    <ul style="list-style-type: none;">
         <% EarthTraits.forEach((element) =>{%>
-         <li><%=element%></li>
+            <li><a href="/earth/"></a><%=element%></li>
+         
         <%})%>
     </ul>
 </body>
