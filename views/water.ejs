@@ -1,0 +1,15 @@
+<h2>Water Signs</h2>
+
+<ul>
+    <% waterSignsKey.forEach(sign=>{ %>
+        <a href="/water/<%=sign%>"><li> <%= sign%></li></a>
+
+   <%   }) %>
+</ul>
+
+<ul>
+    <% waterSignsTraitsKey.forEach((waterSignTraits)=>{ %>
+        <li> <%= waterSignTraits%></li>
+
+   <%   }) %>
+</ul>

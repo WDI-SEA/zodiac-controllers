@@ -1,0 +1,16 @@
+<h2>Earth Signs</h2>
+
+<ul>
+    <% earthSignsKey.forEach(sign=>{ %>
+        <a href="/earth/<%=sign%>"><li> <%= sign%></li></a>
+
+   <%   }) %>
+</ul>
+
+
+<ul>
+    <% earthSignsTraitsKey.forEach((earthSignsTraits)=>{ %>
+        <li> <%= earthSignsTraits%></li>
+
+   <%   }) %>
+</ul>
