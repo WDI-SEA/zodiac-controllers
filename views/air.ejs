@@ -1,21 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Water</title>
-</head>
-<body>
-    <h1>Air</h1>
 
-    <ul>
 
-        <% airTrait.forEach((trait)=>{ %>
-            <li><%= trait %></li>
-        <% }) %>
-        
-    </ul>
-</body>
-</html>
- 17 
+<h2>air<</h2>
+<ul>
+
+    <% fireTrait.forEach((trait)=>{ %>
+        <li><%= trait %></li>
+    <% }) %>
+    
+</ul>
+
+<ul>
+<% types.forEach((type) =>{ %>
+
+<a href="/fire/<%= type %>"><li><%= type %></li></a>
+
+      <%})%>
+</ul>
