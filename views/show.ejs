@@ -1,0 +1,11 @@
+<!-- single legged squid embeds one template in another -->
+<%- include('partials/header.ejs') -%> <%signs.forEach(sign=>{ %>
+<a href="/earth/" <%="sign%"></a>
+<%})%>
+<p>Traits</p>
+<ul>
+  <%traits.forEach(trait=>{ %>
+  <li><%=trait%></li>
+  <%})%>
+</ul>
+<%- include('partials/footer.ejs') -%>

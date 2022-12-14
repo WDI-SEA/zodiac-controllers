@@ -1,0 +1,14 @@
+<!-- single legged squid embeds one template in another -->
+<%- include('partials/header.ejs') -%>
+<!-- main content -->
+<h1>Air Signs</h1>
+<p>Aquarius</p>
+<p>Gemini</p>
+<p>Libra</p>
+<ul>
+  <% airSigns.forEach(air =>{ %>
+  <li><%= air %></li>
+  <%})%>
+</ul>
+
+<%- include('partials/footer.ejs') -%>
