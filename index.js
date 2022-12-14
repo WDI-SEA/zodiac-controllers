@@ -4,22 +4,14 @@ const express = require('express')
 const app = express()
 const PORT = 5500
 app.set('view engine', 'ejs')
-
-app.use(express.static(__dirname + '/public'));
 app.use(express.static('public'))
 
+// ROUTES //
 
-// routes //
-
-// HOME
+// Home
 app.get('/', (req,res) => {
     res.render(`home.ejs`)
 })
-
-//Sign pictures:
-// app.get('/*', (req,res) => {
-//     res.render('signs.ejs')
-// })
 
 // Water
 app.use('/water', require('./controllers/water'))
@@ -32,7 +24,6 @@ app.use('/fire', require('./controllers/fire'))
 
 // Earth
 app.use('/earth', require('./controllers/earth'))
-
 
 //listen on a port
 app.listen(PORT, () => {
