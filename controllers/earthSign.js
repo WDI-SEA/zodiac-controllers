@@ -3,7 +3,8 @@ const router = express.Router()
 
 router.get('/earths', (req, res) => {
     res.render('earth.ejs' , {
-        Signs: ['taurus', 'virgo', 'capricorn']
+        Signs: ['taurus', 'virgo', 'capricorn'],
+        Abilities: ['grounded', 'helpful', 'practical', 'realistic', 'materialistic', 'dependable']
     })
 })
 

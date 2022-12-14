@@ -3,7 +3,8 @@ const router = express.Router()
 
 router.get('/fires', (req, res) => {
     res.render('fire.ejs' , {
-        Signs: ['leo', 'aries', 'sagittarius']
+        Signs: ['leo', 'aries', 'sagittarius'],
+        Abilities: ['passionate', 'strong emotions', 'temperamental', 'energetic', 'accomplished', 'interesting']
     })
 })
 
