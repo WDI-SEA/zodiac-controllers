@@ -11,6 +11,9 @@ app.get('/', (req, res) => {
     res.render(__dirname + '/views/index.ejs')
 })
 app.use('/earth', require('./controllers/earth.js'))
+app.use('/air', require('./controllers/air.js'))
+app.use('/water', require('./controllers/water.js'))
+app.use('/fire', require('./controllers/fire.js'))
 
 app.get('/water', (req, res) =>{
     res.render('water.ejs', {
