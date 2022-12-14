@@ -4,8 +4,7 @@
 
 <ol>
     <% signs.forEach(sign => { %>
-      <% let link = String(sign)%>
-        <li><a href="./earth" + <%=link%> > <%= sign %> </a></li>
+        <li><a href="/earth/<%=sign%>"> <%= sign %> </a></li>
 
   <%  }) %>
 </ol>

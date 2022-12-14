@@ -13,7 +13,7 @@ app.use(express.static('public'))
 
 // HOME
 app.get('/', (req,res) => {
-    res.render(`index.ejs`)
+    res.render(`home.ejs`)
 })
 
 //Sign pictures:
