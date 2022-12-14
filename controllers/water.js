@@ -8,9 +8,6 @@ router.get("/", async (req, res) => {
     console.error(error);
   }
 });
-// /water/cancer	image of cancer symbol
-// /water/scorpio	image of scorpio symbol
-// /water/pisces	image of pisces symbol
 
 router.get("/cancer", async (req, res) => {
   try {

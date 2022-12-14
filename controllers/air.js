@@ -10,4 +10,27 @@ router.get("/", async (req, res) => {
   }
 });
 
+router.get("/gemini", async (req, res) => {
+  try {
+    res.render("gemini.ejs");
+  } catch (error) {
+    console.error(error);
+  }
+});
+
+router.get("/libra", async (req, res) => {
+  try {
+    res.render("libra.ejs");
+  } catch (error) {
+    console.error(error);
+  }
+});
+
+router.get("/aquarius", async (req, res) => {
+  try {
+    res.render("aquarius.ejs");
+  } catch (error) {
+    console.error(error);
+  }
+});
 module.exports = router;
