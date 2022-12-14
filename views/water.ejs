@@ -1,0 +1,15 @@
+<!-- single legged squid embeds one template in another -->
+<%- include('partials/header.ejs') -%>
+<!-- main content -->
+<h1>Water Signs</h1>
+<p>Pisces</p>
+<p>Cancer</p>
+<p>Scorpio</p>
+
+<ul>
+  <% waterSigns.forEach(water =>{ %>
+  <li><%= water %></li>
+  <%})%>
+</ul>
+
+<%- include('partials/footer.ejs') -%>
