@@ -20,10 +20,10 @@ const elements = {
     }
 }  
 
-router.get('/', (req, res) =>{
-    const signs = elements.earth.signs
-    const traits = elements.earth.traits
-    res.render("show.ejs", {signs:signs, traits:traits})
+router.get('/:sign', (req, res) =>{
+    const symbol = req.params.sign
+    const file = symbol + ".png"
+    res.render("sign.ejs", {symbol:req.params.sign})
 })
 
 module.exports = router

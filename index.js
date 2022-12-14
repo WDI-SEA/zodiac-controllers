@@ -21,11 +21,14 @@ const elements = {
     }
 }   
 
+app.use(express.static('public'))
 
 app.use('/water', require('./controllers/water'))
 app.use('/fire', require('./controllers/fire'))
 app.use('/earth', require('./controllers/earth'))
 app.use('/air', require('./controllers/air'))
+
+
 
 app.set('view engine', 'ejs')
 
