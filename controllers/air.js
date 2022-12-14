@@ -11,17 +11,17 @@ router.get('/', (req,res) => {
 
 //get /aquarius
 router.get('/aquarius', (req,res) => {
-    res.send('')
+    res.send('aquarius.ejs')
 })
 
 //get /gemini
 router.get('/gemini', (req,res) => {
-    res.render('')
+    res.render('gemini.ejs')
 })
 
 //get /libra
 router.get('/libra', (req,res) => {
-    res.render('')
+    res.render('libra.ejs')
 })
 
 //export the router

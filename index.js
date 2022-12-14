@@ -1,13 +1,15 @@
 //---REQUIRED PACKAGES---
 const express = require('express')
+let path = require('path')
 
 //---APP CONFIG----
 const app = express()
 const PORT = 3000
 app.set('view engine', 'ejs')
+app.set("views", path.join(__dirname, "/views"));
 
 //---MIDDLEWARES---
-app.use(express.static('public'))
+app.use(express.static(__dirname + '/public'))
 
 //---ROUTES----
 app.get('/', (req,res) => {

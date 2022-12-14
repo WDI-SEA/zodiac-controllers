@@ -11,17 +11,17 @@ router.get('/', (req,res) => {
 
 //get /taurus
 router.get('/taurus', (req,res) => {
-    res.send('')
+    res.send('taurus.ejs')
 })
 
 //get /virgo
 router.get('/virgo', (req,res) => {
-    res.render('')
+    res.render('virgo.ejs')
 })
 
 //get /capicorn
 router.get('/capicorn', (req,res) => {
-    res.render('')
+    res.render('capicorn.ejs')
 })
 
 //export the router

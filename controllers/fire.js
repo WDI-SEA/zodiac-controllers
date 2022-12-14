@@ -11,17 +11,17 @@ router.get('/', (req,res) => {
 
 //get /aries
 router.get('/aries', (req,res) => {
-    res.send('')
+    res.send('aries.ejs')
 })
 
 //get /leo
 router.get('/leo', (req,res) => {
-    res.send('')
+    res.send('leo.ejs')
 })
 
 //get /sagittarius
 router.get('/sagittarius', (req,res) => {
-    res.send('')
+    res.send('sagittarius.ejs')
 })
 
 //export the router

@@ -12,17 +12,17 @@ router.get('/', (req,res) => {
 
 //get /pisces
 router.get('/pisces', (req,res) => {
-    res.render('')
+    res.render('pisces.ejs')
 })
 
 //get /cancer
 router.get('/cancer', (req,res) => {
-    res.render('')
+    res.render('cancer.ejs')
 })
 
 //get /scorpio
 router.get('/scorpio', (req,res) => {
-    res.render('')
+    res.render('scorpio')
 })
 
 
