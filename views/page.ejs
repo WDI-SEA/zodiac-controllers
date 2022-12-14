@@ -1,0 +1,20 @@
+<%- include('partials/header.ejs') %>
+    <a href="/">Back</a>
+    <ul>
+        <% signs.forEach(sign=> { %>
+            <li>
+                <a href='/<%=element%>/<%= sign %>'>
+                    <%= sign %>
+                </a>
+            </li>
+            <%}) %>
+    </ul>
+    <ol>
+        <% traits.forEach(trait=> { %>
+            <li>
+                <%= trait %>
+            </li>
+            <%}) %>
+    </ol>
+
+    <%- include('partials/footer.ejs') %>
