@@ -1,25 +1,39 @@
 const express = require('express')
 const app = express ()
 const PORT = 5500
+app.set('view engine', 'ejs')
+
+//CSS & Images
+app.use(express.static('public'))
+
 
 app.get('/', (req, res) => {
-    res.send('3 navigation links (/water, /air, /fire, /earth)')
+    res.render(__dirname + '/views/index.ejs')
 })
+app.use('/earth', require('./controllers/earth.js'))
 
 app.get('/water', (req, res) =>{
-    res.send('Water Sign')
+    res.render('water.ejs', {
+        waterSign: ['Pisces', 'Cancer', 'Scorpio']
+    })
 })
 
 app.get('/air', (req, res) =>{
-    res.send('Air Sign')
+    res.render('air.ejs', {
+        airSign: ['Aquarius', 'Gemini', 'Libra']
+    } )
 })
 
 app.get('/fire', (req, res) =>{
-    res.send('Fire Sign')
+    res.render('fire.ejs', {
+        fireSign: ['Aries', 'Leo', 'Sagittarius']
+    } )
 })
 
 app.get('/earth', (req, res) =>{
-    res.send('Earth Sign')
+    res.render('earth.ejs', {
+        earthSign: ['Taurus', 'Virgo', 'Capricorn']
+    } )
 })
 
 
