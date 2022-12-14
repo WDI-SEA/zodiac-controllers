@@ -6,7 +6,7 @@ app.set("view engine", "ejs");
 // set path to views folder
 app.set("views", path.join(__dirname, "/views"));
 // Create static folder
-app.use(express.static(__dirname + "/public"));
+app.use(express.static("public"));
 
 // ROUTES
 app.get("/", async (req, res) => {
@@ -18,6 +18,7 @@ app.get("/", async (req, res) => {
     console.error(error);
   }
 });
+
 // CONTROLLERS
 app.use("/air", require("./controllers/air"));
 app.use("/water", require("./controllers/water"));
