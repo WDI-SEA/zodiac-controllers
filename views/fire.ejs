@@ -1,0 +1,17 @@
+<%- include('./layout.ejs') %>
+
+<h1>Fire Signs:</h1>
+
+<ol>
+    <% signs.forEach(sign => { %>
+        <li><%= sign %></li>
+  <%  }) %>
+</ol>
+
+<h1>And Their Traits:</h1>
+
+<ul>
+    <% traits.forEach(trait => { %>
+        <li><%= trait %></li>
+  <%  }) %>
+</ul>

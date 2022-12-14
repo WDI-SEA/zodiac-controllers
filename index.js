@@ -14,43 +14,37 @@ app.get('/', (req,res) => {
 
 // Water
 app.get('/water', (req,res) => {
-    res.send('water works!')
+    // res.send('water works!')
+    res.render('water.ejs', {
+        signs: ['Pisces', 'Cancer', 'Scorpio'],
+        traits: ['private', 'mysterious', 'psychic', 'charming', 'emotional', 'sensitive']
+    })
 })
 
 // Air
 app.get('/air', (req,res) => {
-    res.send('air works!')
+    // res.send('air works!')
+    res.render('air.ejs', {
+        signs: ['Aquarius', 'Gemini', 'Libra'],
+        traits: ['movement', 'creativity', 'action', 'adventure', 'exciting', 'easily provoked']
+    })
 })
 
 // Fire
 app.get('/fire', (req,res) => {
-    res.send('fire works!')
+    // res.send('fire works!')
+    res.render('fire.ejs', {
+        signs: ['Aries', 'Leo', 'Sagittarius'],
+        traits: ['passionate', 'strong emotions', 'temperamental', 'energetic', 'accomplished', 'interesting']
+    })
 })
 
 // Earth
 app.get('/earth', (req,res) => {
-    res.send('earth works!')
-})
-
-
-
-// WATER
-app.get('/water', (req,res) => {
-    res.render('water.ejs', {
-        signs: ['Pisces', 'Cancer', 'Scorpio'],
-        traits: []
-    })
-})
-
-
-'Aquarius', 'Gemini', 'Libra'
-
-
-
-// GET /loveit/animals -- renders view of favorite animals
-app.get('/loveit/animals', (req,res) => {
-    res.render('animals.ejs', {
-        animals: ['cat', 'dog', 'aardvark', 'parrot', 'sloth']
+    // res.send('earth works!')
+    res.render('earth.ejs', {
+        signs: ['Taurus', 'Virgo', 'Capricorn'],
+        traits: ['grounded', 'helpful', 'practical', 'realistic', 'materialistic', 'dependable']
     })
 })
 
