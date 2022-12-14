@@ -4,7 +4,9 @@ const router = express.Router();
 //air
 router.get("/", async (req, res) => {
   try {
-    res.render("air");
+    res.render("air", {
+      title: "Air | Home",
+    });
   } catch (error) {
     console.error(error);
   }
@@ -12,7 +14,9 @@ router.get("/", async (req, res) => {
 
 router.get("/gemini", async (req, res) => {
   try {
-    res.render("gemini.ejs");
+    res.render("gemini.ejs", {
+      title: "Air | Gemini",
+    });
   } catch (error) {
     console.error(error);
   }
@@ -20,7 +24,9 @@ router.get("/gemini", async (req, res) => {
 
 router.get("/libra", async (req, res) => {
   try {
-    res.render("libra.ejs");
+    res.render("libra.ejs", {
+      title: "Air | Libra",
+    });
   } catch (error) {
     console.error(error);
   }
@@ -28,7 +34,9 @@ router.get("/libra", async (req, res) => {
 
 router.get("/aquarius", async (req, res) => {
   try {
-    res.render("aquarius.ejs");
+    res.render("aquarius.ejs", {
+      title: "Air | Aquarius",
+    });
   } catch (error) {
     console.error(error);
   }

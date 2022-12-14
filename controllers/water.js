@@ -3,7 +3,9 @@ const router = express.Router();
 
 router.get("/", async (req, res) => {
   try {
-    res.render("water.ejs");
+    res.render("water.ejs", {
+      title: "Water | Home",
+    });
   } catch (error) {
     console.error(error);
   }
@@ -11,7 +13,9 @@ router.get("/", async (req, res) => {
 
 router.get("/cancer", async (req, res) => {
   try {
-    res.render("cancer.ejs");
+    res.render("cancer.ejs", {
+      title: "Water | Cancer",
+    });
   } catch (error) {
     console.error(error);
   }
@@ -19,7 +23,9 @@ router.get("/cancer", async (req, res) => {
 
 router.get("/scorpio", async (req, res) => {
   try {
-    res.render("scorpio.ejs");
+    res.render("scorpio.ejs", {
+      title: "Water | Scorpio",
+    });
   } catch (error) {
     console.error(error);
   }
@@ -27,7 +33,9 @@ router.get("/scorpio", async (req, res) => {
 
 router.get("/pisces", async (req, res) => {
   try {
-    res.render("pisces.ejs");
+    res.render("pisces.ejs", {
+      title: "Water | Pisces",
+    });
   } catch (error) {
     console.error(error);
   }

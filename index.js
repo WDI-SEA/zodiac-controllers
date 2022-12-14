@@ -7,10 +7,13 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "/views"));
 // Create static folder
 app.use(express.static(__dirname + "/public"));
+
 // ROUTES
 app.get("/", async (req, res) => {
   try {
-    res.render("index.ejs");
+    res.render("index.ejs", {
+      title: "Elements | Home",
+    });
   } catch (error) {
     console.error(error);
   }

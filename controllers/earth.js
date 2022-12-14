@@ -3,7 +3,9 @@ const router = express.Router();
 
 router.get("/", async (req, res) => {
   try {
-    res.render("earth.ejs");
+    res.render("earth.ejs", {
+      title: "Earth | Home",
+    });
   } catch (error) {
     console.error(error);
   }
@@ -11,7 +13,9 @@ router.get("/", async (req, res) => {
 
 router.get("/taurus", async (req, res) => {
   try {
-    res.render("taurus.ejs");
+    res.render("taurus.ejs", {
+      title: "Earth | Taurus",
+    });
   } catch (error) {
     console.error(error);
   }
@@ -19,7 +23,9 @@ router.get("/taurus", async (req, res) => {
 
 router.get("/virgo", async (req, res) => {
   try {
-    res.render("virgo.ejs");
+    res.render("virgo.ejs", {
+      title: "Earth | Virgo",
+    });
   } catch (error) {
     console.error(error);
   }
@@ -27,7 +33,9 @@ router.get("/virgo", async (req, res) => {
 
 router.get("/capricorn", async (req, res) => {
   try {
-    res.render("capricorn.ejs");
+    res.render("capricorn.ejs", {
+      title: "Earth | Capricorn",
+    });
   } catch (error) {
     console.error(error);
   }
