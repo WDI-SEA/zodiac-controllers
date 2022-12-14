@@ -2,11 +2,9 @@
 
 <h1>Air Signs:</h1>
 
-<ul>
-    <% Signs.forEach(air => { %>
-        <li><%= air %></li>
-  <%  }) %>
-</ul>
+<% Signs.forEach(air => { %>
+  <a href="/airs/<%= air %>"><%= air %></a>
+<%  }) %>
 
 <h2>Air abilities: </h2>
 <ol>

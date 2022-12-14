@@ -2,11 +2,9 @@
 
 <h1>Earth Signs:</h1>
 
-<ul>
-    <% Signs.forEach(earth => { %>
-        <li><%= earth %></li>
-  <%  }) %>
-</ul>
+<% Signs.forEach(earth => { %>
+  <a href="/earths/<%= earth %>"><%= earth %></a>
+<%  }) %>
 
 <h2>Earth abilities: </h2>
 <ol>

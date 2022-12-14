@@ -2,11 +2,9 @@
 
 <h1>Fire Signs:</h1>
 
-<ul>
-    <% Signs.forEach(fire => { %>
-        <li><%= fire %></li>
-  <%  }) %>
-</ul>
+<% Signs.forEach(fire => { %>
+  <a href="/fires/<%= fire %>"><%= fire %></a>
+<%  }) %>
 
 <h2>Fire abilities: </h2>
 <ol>
