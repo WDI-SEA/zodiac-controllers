@@ -12,15 +12,15 @@ router.get('/', (req,res) => {
 })
 
 router.get('/cancer', (req, res) => {
-    res.render('signs.ejs')
+    res.render('cancer.ejs')
 })
 
 router.get('/scorpio', (req, res) => {
-    res.render('signs.ejs')
+    res.render('scorpio.ejs')
 })
 
 router.get('/pisces', (req, res) => {
-    res.render('signs.ejs')
+    res.render('pisces.ejs')
 })
 
 module.exports = router
