@@ -1,0 +1,23 @@
+<%- include('./partials/header.ejs') %>
+
+<h2><%= element %></h2>
+
+<h3>Signs</h3>
+
+<ul>
+	<% signs.forEach(sign => { %>
+		<li>
+			<a href="/<%= element.toLowerCase() %>/<%= sign.toLowerCase() %>"><%= sign %></a>
+		</li>
+	<% }) %>
+</ul>
+
+<h3>Traits</h3>
+
+<ul>
+	<% traits.forEach(trait => { %>
+		<li> <%= trait %> </li>
+	<% }) %>
+</ul>
+
+<%- include('./partials/footer.ejs') %>  
