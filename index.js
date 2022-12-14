@@ -39,6 +39,7 @@ app.get('/earth', (req, res) =>{
     } )
 })
 
+// app.use(express.static(__dirname + '/public'));
 
 app.listen(PORT, () => {
     console.log('Port running!')

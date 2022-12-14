@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+}
+body {
+    display: block;
+    width: 100% vw;
+    height: 100% vh;
+    background: rgb(119, 105, 105);
+}
+nav {
+    display: inline block;
+    list-style: none;
+    border: 1px solid darkblue;
+    background: radial-gradient(33, 38, 45)
+}
