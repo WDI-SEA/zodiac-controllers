@@ -6,6 +6,14 @@ router.get("/", async (req, res) => {
   try {
     res.render("air", {
       title: "Air | Home",
+      traits: [
+        "Movement",
+        "Creativity",
+        "Action",
+        "Adventure",
+        "Exciting",
+        "Provokable",
+      ],
     });
   } catch (error) {
     console.error(error);

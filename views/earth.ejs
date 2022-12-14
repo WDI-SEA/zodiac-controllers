@@ -37,5 +37,18 @@
     </button>
   </div>
   <!-- End Carousel -->
+  <!-- Start traits banner -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <ul
+        class="nav text-success d-flex flex-wrap justify-content-between w-100"
+      >
+        <%traits.forEach(trait=>{%>
+        <li class="nav-item"><%=trait%></li>
+        <%})%>
+      </ul>
+    </div>
+  </nav>
+  <!-- End traits banner -->
 </main>
 <%- include('./partials/footer.ejs')%>

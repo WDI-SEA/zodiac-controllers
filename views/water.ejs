@@ -1,27 +1,5 @@
 <%- include('./partials/header.ejs')%>
 <main class="min-vh-100">
-  <!-- Start traits banner -->
-  <nav
-    class="navbar navbar-expand-lg navbar-dark bg-dark"
-    aria-label="Tenth navbar example"
-  >
-    <div class="container-fluid">
-      <ul
-        class="nav text-primary d-flex flex-wrap justify-content-between w-100"
-      >
-        <%traits.forEach(trait=>{%>
-        <li class="nav-item"><%=trait%></li>
-        <%})%>
-
-        <!-- <li class="nav-item">Private</li>
-        <li class="nav-item">Psychic</li>
-        <li class="nav-item">Charming</li>
-        <li class="nav-item">Emotional</li>
-        <li class="nav-item">Sensitive</li> -->
-      </ul>
-    </div>
-  </nav>
-  <!-- End traits banner -->
   <!-- Start Carousel -->
   <div
     id="carouselExampleControls"
@@ -59,5 +37,18 @@
     </button>
   </div>
   <!-- End Carousel -->
+  <!-- Start traits banner -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <ul
+        class="nav text-primary d-flex flex-wrap justify-content-between w-100"
+      >
+        <%traits.forEach(trait=>{%>
+        <li class="nav-item"><%=trait%></li>
+        <%})%>
+      </ul>
+    </div>
+  </nav>
+  <!-- End traits banner -->
 </main>
 <%- include('./partials/footer.ejs')%>

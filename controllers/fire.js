@@ -5,6 +5,14 @@ router.get("/", async (req, res) => {
   try {
     res.render("fire.ejs", {
       title: "Fire | Home",
+      traits: [
+        "Passionate",
+        "Emotional",
+        "Tempermental",
+        "Energetic",
+        "Accomplished",
+        "Interesting",
+      ],
     });
   } catch (error) {
     console.error(error);

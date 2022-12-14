@@ -5,6 +5,14 @@ router.get("/", async (req, res) => {
   try {
     res.render("earth.ejs", {
       title: "Earth | Home",
+      traits: [
+        "Grounded",
+        "Helpful",
+        "Practical",
+        "Realistic",
+        "Materialistic",
+        "Dependable",
+      ],
     });
   } catch (error) {
     console.error(error);
