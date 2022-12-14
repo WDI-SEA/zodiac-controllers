@@ -5,6 +5,14 @@ router.get("/", async (req, res) => {
   try {
     res.render("water.ejs", {
       title: "Water | Home",
+      traits: [
+        "Private",
+        "Mysterious",
+        "Psychic",
+        "Charming",
+        "Emotional",
+        "Sensitive",
+      ],
     });
   } catch (error) {
     console.error(error);
