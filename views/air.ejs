@@ -1,17 +1,19 @@
-<%- include('./layout.ejs') %>
+<%- include('./partials/header.ejs') %>
 
 <h1>Air Signs:</h1>
 
 <ol>
     <% signs.forEach(sign => { %>
         <li><%= sign %></li>
-  <%  }) %>
-</ol>
+        <%  }) %>
+    </ol>
+    
+    <h1>And Their Traits:</h1>
+    
+    <ul>
+        <% traits.forEach(trait => { %>
+            <li><%= trait %></li>
+            <%  }) %>
+        </ul>
 
-<h1>And Their Traits:</h1>
-
-<ul>
-    <% traits.forEach(trait => { %>
-        <li><%= trait %></li>
-  <%  }) %>
-</ul>
+<%- include('./partials/footer.ejs') %>
