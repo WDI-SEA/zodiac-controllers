@@ -1,0 +1,13 @@
+<%- include('partials/header.ejs') %>
+
+    <h1>Earth</h1>
+    
+
+    <h2>Traits</h2>
+    <ol>
+        <% earth.forEach(earthTrait => { %>
+            <li><%= earthTrait %></li>
+        <% }) %>
+    </ol>
+    
+<%- include('partials/footer.ejs') %>
