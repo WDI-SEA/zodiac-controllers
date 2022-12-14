@@ -1,5 +1,10 @@
 <%- include('./header.ejs') %>
 <h2>Let's learn about the signs</h2>
+<p>There are 12 different horoscope signs, each with its own strengths, weaknesses, traits, desires, and way of viewing the world. Your personal astrological sign is based on the position of the sun on the day you were born. Take a look below to learn what your zodiac sign is, and click on each to discover their powerful traits and secrets.</p>
+
+<% sign.forEach(sign => { %>
+    <a href="water/<% sign %>"><img src="imgs/<%= sign %>.png" width="250px" height="230px" alt="<% sign %>"></a>
+    <% }) %>
 
 </body>
 </html>

@@ -8,7 +8,9 @@ app.use(express.static('public'))
 
 
 app.get('/', (req, res) => {
-    res.render(__dirname + '/views/index.ejs')
+    res.render(__dirname + '/views/index.ejs', {
+        sign: ['Pisces', 'Cancer', 'Scorpio', 'Aquarius', 'Gemini', 'Libra', 'Aries', 'Leo', 'Sagittarius','Taurus', 'Virgo', 'Capricorn']
+    })
 })
 app.use('/earth', require('./controllers/earth.js'))
 app.use('/air', require('./controllers/air.js'))
