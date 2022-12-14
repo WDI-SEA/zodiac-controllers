@@ -3,6 +3,7 @@ const express = require('express')
 const router = express.Router()
 
 //mount your routes on the router
+
 router.get('/', (req,res) => {
     // res.send('earth works!')
     res.render('earth.ejs', {
