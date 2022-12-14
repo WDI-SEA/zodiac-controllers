@@ -1,0 +1,11 @@
+<%- include('partials/header.ejs') %>
+
+<h1>Earth Signs:</h1>
+
+<ul>
+    <% Signs.forEach(earth => { %>
+        <li><%= earth %></li>
+  <%  }) %>
+</ul>
+
+<%- include('partials/footer.ejs') %>
