@@ -1,51 +1,26 @@
-const express = require('express')
-const app = express()
-let path = require('path')
+const express = require("express");
+const app = express();
+let path = require("path");
+// set templating engine
+app.set("view engine", "ejs");
+// set path to views folder
+app.set("views", path.join(__dirname, "/views"));
+// Create static folder
+app.use(express.static(__dirname + "/public"));
+// ROUTES
+app.get("/", async (req, res) => {
+  try {
+    res.render("index.ejs");
+  } catch (error) {
+    console.error(error);
+  }
+});
+// CONTROLLERS
+app.use("/air", require("./controllers/air"));
+app.use("/water", require("./controllers/water"));
+app.use("/earth", require("./controllers/earth"));
+app.use("/fire", require("./controllers/fire"));
 
-app.set('view engine','ejs')
-app.set('views',path.join(__dirname,'/views'))
-app.use(express.static(__dirname + '/public'))
-
-app.get('/',async(req,res)=>{
-    try {
-        res.render('index.ejs')
-    } catch (error) {
-        console.error(error)
-    }
-})
-
-//water
-app.get('/water',async(req,res)=>{
-    try {
-        res.render('water')
-    } catch (error) {
-        console.error(error)
-    }
-})
-//air 
-app.get('/air',async(req,res)=>{
-    try {
-        res.render('air')
-    } catch (error) {
-        console.error(error)
-    }
-})
-//earth
-app.get('/earth',async(req,res)=>{
-    try {
-        res.render('earth')
-    } catch (error) {
-        console.error(error)
-    }
-})
-//fire
-app.get('/fire', async(req,res)=>{
-    try {
-        res.render('fire')
-    } catch (error) {
-        console.error(error)
-    }
-})
-app.listen(8000,()=>{
-    console.log('listening for requests on port 8000')
-})
+app.listen(8000, () => {
+  console.log("listening for requests on port 8000");
+});
