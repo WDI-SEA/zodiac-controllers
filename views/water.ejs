@@ -1,0 +1,11 @@
+<%- include('partials/header.ejs') %>
+
+<h1>Zodiac Sign: Water</h1>
+
+<ul>
+    <% signs.forEach(sign => { %>
+        <li><%= sign %></li>
+    <% }) %>
+</ul>
+
+<%- include('partials/footer.ejs') %>
