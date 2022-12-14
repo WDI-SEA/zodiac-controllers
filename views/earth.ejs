@@ -1,0 +1,17 @@
+<%- include('partials/header.ejs') %>
+
+<h1>List of earth signs and relevant traits</h1>
+
+<ul>
+    <% signs.forEach(sign => { %>
+      <li><%= sign %></li>  
+    <% }) %>
+</ul>
+
+<ul>
+    <% traits.forEach(trait => { %>
+      <li><%= trait %></li>  
+    <% }) %>
+</ul>
+
+<%- include('partials/footer.ejs') %>
