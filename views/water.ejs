@@ -4,6 +4,8 @@
 
 <ul>
     <% waterSign.forEach(water => { %>
-        <li><%=water%></li>
-    <%  }) %>
+        <li id="list"><%=water%></li>
+        <a href="water/<%= water %>"><img src="imgs/<%= water %>.png" width="250px" height="230px" alt="<%= water %>"></a>
 </ul>
+
+ <% }) %>

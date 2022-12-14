@@ -3,8 +3,15 @@
 <p>There are 12 different horoscope signs, each with its own strengths, weaknesses, traits, desires, and way of viewing the world. Your personal astrological sign is based on the position of the sun on the day you were born. Take a look below to learn what your zodiac sign is, and click on each to discover their powerful traits and secrets.</p>
 
 <% sign.forEach(sign => { %>
-    <a href="water/<% sign %>"><img src="imgs/<%= sign %>.png" width="250px" height="230px" alt="<% sign %>"></a>
-    <% }) %>
-
+   <%if ( sign == 'Pisces' ||sign == 'Cancer' || sign == 'Scorpio' ){ %>
+        <a href="water/<%= sign %>"><img src="imgs/<%= sign %>.png" width="250px" height="230px" alt="<%= sign %>"></a>
+    <% } else if( sign == 'Aquarius' ||sign == 'Gemini' || sign == 'Libra' ){%>
+        <a href="air/<%= sign %>"><img src="imgs/<%= sign %>.png" width="250px" height="230px" alt="<%= sign %>"></a>
+    <% } else if( sign == 'Aries' ||sign == 'Leo' || sign == 'Sagittarius' ){%>
+        <a href="fire/<%= sign %>"><img src="imgs/<%= sign %>.png" width="250px" height="230px" alt="<%= sign %>"></a>
+    <% } else if( sign == 'Taurus' ||sign == 'Virgo' || sign == 'Capricorn' ){%>
+        <a href="earth/<%= sign %>"><img src="imgs/<%= sign %>.png" width="250px" height="230px" alt="<%= sign %>"></a>
+    <% } %>
+<% }) %>
 </body>
 </html>
