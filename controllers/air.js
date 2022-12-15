@@ -18,16 +18,9 @@ router.get('/', (req, res) => {
   })
 })
 
-router.get('/aquarius', (req, res) => {
-  res.sendFile(__dirname + 'aquarius.png')
-})
-
-router.get('/gemini', (req, res) => {
-  res.sendFile(__dirname + 'gemini.png')
-})
-
-router.get('/libra', (req, res) => {
-  res.sendFile(__dirname + 'libra.png')
+router.get('/:sign', (req, res) => {
+  const sign = req.params.sign
+  res.sendFile('/home/cephandrius/seir-1114/unit2/zodiac-controllers/public/' + sign + '.png')
 })
 
 // export the router
