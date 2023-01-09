@@ -1,9 +1,11 @@
 const express = require('express')
+const ejsLayouts = require('express-ejs-layouts')
 
 const app = express()
 const PORT = 8000
 app.set('view enging', 'ejs')
 
+app.use(ejsLayouts)
 app.use(express.static('public'))
 
 
