@@ -13,9 +13,8 @@
 * create your entry point file
 * install express and set it up in your `index.js`
 * Install and configure `ejs`
-* Install and configure `express-ejs-layouts`
 * Stub out the 4 routes below using `res.send()`, just to make sure they're working
-* Create a `views` folder with a `layout.ejs` that contains the boilerplate and a header that says **Zodiac Controller**
+* Create a `views` folder that contains the boilerplate and a header that says **Zodiac Controller**
 * Create a view for your home route (`index.ejs`) that says "Let's learn about the signs!" and includes links to the other four routes. Make your home route `res.render` this view.
 * Create a view for each of the four categories of signs. Each view should recieve an array of traits that it displays to the page using a `forEach` loop.
 
