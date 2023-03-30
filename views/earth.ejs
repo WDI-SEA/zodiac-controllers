@@ -2,6 +2,11 @@
 
 <h1>Earth Signs</h1>
 <ul>
+    <% signs.forEach((sign) => { %>
+       <li> <%= sign %> </li>
+    <% }) %>
+</ul>
+<ul>
     <% traits.forEach((trait) => { %>
        <li> <%= trait %> </li>
     <% }) %>
