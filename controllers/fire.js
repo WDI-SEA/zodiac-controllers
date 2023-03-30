@@ -1,6 +1,21 @@
 const express = require("express");
 const router = express.Router();
 
+router.get("/", (req, res) => {
+  res.render("fire", {
+    fireSigns: ["Aries", "Leo", "Sagittarius"],
+    fireTraits: [
+      "passionate",
+      "strong emotions",
+      "temperamental",
+      "energetic",
+      "accomplished",
+      "interesting",
+    ],
+    title: "fire signs",
+  });
+});
+
 router.get("/aries", (req, res) => {
   res.render("fire/aries", {
     fireSigns: ["Aries", "Leo", "Sagittarius"],

@@ -1,6 +1,21 @@
 const express = require("express");
 const router = express.Router();
 
+router.get("/", (req, res) => {
+  res.render("earth", {
+    earthSigns: ["Taurus", "Virgo", "Capricorn"],
+    earthTraits: [
+      "grounded",
+      "helpful",
+      "practical",
+      "realistic",
+      "materialistic",
+      "dependable",
+    ],
+    title: "earth signs",
+  });
+});
+
 router.get("/taurus", (req, res) => {
   res.render("earth/taurus", {
     earthSigns: ["Taurus", "Virgo", "Capricorn"],

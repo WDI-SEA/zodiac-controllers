@@ -4,6 +4,8 @@ const PORT = 8000;
 
 app.set("view engine", "ejs");
 
+app.use(express.static('public'))
+
 app.use("/water", require("./controllers/water"));
 app.use("/air", require("./controllers/air"));
 app.use("/fire", require("./controllers/fire"));

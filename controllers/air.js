@@ -1,6 +1,21 @@
 const express = require("express");
 const router = express.Router();
 
+router.get("/", (req, res) => {
+  res.render("air", {
+    airSigns: ["Aquarius", "Gemini", "Libra"],
+    airTraits: [
+      "movement",
+      "creativity",
+      "action",
+      "adventure",
+      "exciting",
+      "easily provoked",
+    ],
+    title: "air signs",
+  });
+});
+
 router.get("/aquarius", (req, res) => {
   res.render("air/aquarius", {
     airSigns: ["Aquarius", "Gemini", "Libra"],
