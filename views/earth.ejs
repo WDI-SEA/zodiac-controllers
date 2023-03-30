@@ -1,0 +1,15 @@
+<%- include ("partials/header.ejs") %>
+
+<p>Earth folks! You are one of these three signs:</p>
+<ul>
+  <% earthSigns.forEach((sign) => { %>
+  <li><a href="<%= sign %>"><%= sign %></a></li>
+  <% }) %>
+</ul>
+<p>Here are some traits that exemplify you:</p>
+<ul>
+  <% earthTraits.forEach((trait) => { %>
+  <li><%= trait %></li>
+  <% }) %>
+</ul>
+<%- include("partials/footer.ejs") %>
