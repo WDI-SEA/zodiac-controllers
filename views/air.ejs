@@ -1,0 +1,19 @@
+<%- include('partials/header.ejs') %>
+
+<h1>Here is a list of air zodiacs and their traits</h1>
+<ul>
+    <h3>Signs</h3>
+    <li><a href='/air/aquarius'>Aquarius</a></li>
+    <li><a href='/air/gemini'>Gemini</a></li>
+    <li><a href='/air/libra'>Libra</a></li>
+</ul>
+<ul>
+    <h3>Traits</h3>
+    <%traits.forEach((trait) => {%>
+        <li><%=trait%></li>
+    <%}) %>
+</ul>
+
+<%- include('partials/footer.ejs') %>
+
+

@@ -1,0 +1,12 @@
+<%- include('partials/header.ejs') %>
+
+<h1>Sagittarius</h1>
+<img src="/sagittarius.png">
+<ul>
+    <h3>Traits</h3>
+    <%traits.forEach((trait) => {%>
+        <li><%=trait%></li>
+    <%}) %>
+</ul>
+
+<%- include('partials/footer.ejs') %>  
