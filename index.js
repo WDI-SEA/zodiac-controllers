@@ -8,28 +8,45 @@ app.set('view engine', 'ejs')
 app.use(express.static("public"))
 
 const waterSigns = ['Cancer', 'Scorpio', 'Pisces'];
+const waterTraits = ['Private', 'Mysterious', 'Psychic', 'Charming', 'Emotional', 'Sensitive']
 const airSigns = ['Gemini', 'Libra', 'Aquarius'];
+const airTraits = ['Movement', 'Creativity', 'Action', 'Adventure', 'Exciting', 'Easily Provoked']
 const fireSigns = ['Aries', 'Leo', 'Sagittarius'];
+const fireTraits = ['Passionate', 'Strong Emotions', 'Temperamental', 'Energetic', 'Accomplished', 'Interesting']
 const earthSigns = ['Taurus', 'Virgo', 'Capricorn'];
+const earthTraits = ['Grounded', 'Helpful', 'Practical', 'Realistic', 'Materialistic', 'Dependable']
+
 
 app.get('/', (req, res) => {
-    res.send('Welcome to the home page!');
+    res.render('index');
   });
   
   app.get('/water', (req, res) => {
-    res.send('This is the water signs page!');
+    res.render('water', {
+        signs: waterSigns,
+        traits: waterTraits
+    });
   });
   
   app.get('/air', (req, res) => {
-    res.send('This is the air signs page!');
+    res.render('air', {
+        signs: airSigns,
+        traits: airTraits
+    });
   });
   
   app.get('/fire', (req, res) => {
-    res.send('This is the fire signs page!');
+    res.render('fire', {
+        signs: fireSigns,
+        traits: fireTraits
+    });
   });
   
   app.get('/earth', (req, res) => {
-    res.send('This is the earth signs page!');
+    res.render('earth', {
+        signs: earthSigns,
+        traits: earthTraits
+    });
   });
   
   app.listen(3000, () => {
