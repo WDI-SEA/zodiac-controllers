@@ -1,0 +1,15 @@
+<%- include ("partials/header.ejs") %>
+
+<p>Water folks! You are one of these three signs:</p>
+<ul>
+  <% waterSigns.forEach((sign) => { %>
+  <li><%= sign %></li>
+  <% }) %>
+</ul>
+<p>Here are some traits that exemplify you:</p>
+<ul>
+  <% waterTraits.forEach((trait) => { %>
+  <li><%= trait %></li>
+  <% }) %>
+</ul>
+<%- include("partials/footer.ejs") %>
