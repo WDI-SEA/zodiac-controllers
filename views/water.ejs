@@ -6,5 +6,11 @@
         <li> <%= trait %> </li>
     <% }) %>
 </ul>
+<ul>
+    Signs
+    <% signs.forEach((sign) => { %>
+        <li><a href= "/<%= type %>/<%= sign %>"><%= sign %></a></li>
+    <% }) %>
+</ul>
 
 <%- include("partials/footer.ejs") %>

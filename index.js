@@ -16,25 +16,33 @@ app.get("/", (req, res) => {
 
 app.get("/water", (req,res) => {
     res.render('water.ejs', {
-        traits: ['Private', 'Mysterious', 'Psychic', 'Charming', 'Emotional', 'Sensitive']
+        type: 'water',
+        traits: ['Private', 'Mysterious', 'Psychic', 'Charming', 'Emotional', 'Sensitive'],
+        signs: ['pisces', 'cancer', 'scorpio']
     })
 })
 
 app.get("/air", (req,res) => {
     res.render('air.ejs', {
-        traits: ['Movement', 'Creativity', 'Action', 'Adventure', 'Exciting', 'Easily Provoked']
+        traits: ['Movement', 'Creativity', 'Action', 'Adventure', 'Exciting', 'Easily Provoked'],
+        type: 'air',
+        signs: ['aquarius', 'gemini', 'libra']
     })
 })
 
 app.get("/fire", (req,res) => {
     res.render('fire.ejs', {
-        traits: ['Passionate', 'Strong Emotions', 'Temperamental', 'Energetic', 'Accomplished', 'Interesting']
+        traits: ['Passionate', 'Strong Emotions', 'Temperamental', 'Energetic', 'Accomplished', 'Interesting'],
+        type: 'fire',
+        signs: ['aries', 'leo', 'sagittarius']
     })
 })
 
 app.get("/earth", (req,res) => {
     res.render('earth.ejs', {
-        traits: ['Grounded', 'Helpful', 'Practical', 'Realistic', 'Materialistic', 'Dependable']
+        traits: ['Grounded', 'Helpful', 'Practical', 'Realistic', 'Materialistic', 'Dependable'],
+        type: 'earth',
+        signs: ['taurus', 'virgo', 'capricorn']
     })
 })
 

@@ -19,11 +19,11 @@ router.get("/aries", (req, res) => {
     })
 })
 
-router.get("/sagittatius", (req, res) => {
+router.get("/sagittarius", (req, res) => {
     res.render("template.ejs", {
-        sign: 'sagittatius',
+        sign: 'sagittarius',
         category: 'fire',
-        image: 'imgs/sagittatius.png'
+        image: 'imgs/sagittarius.png'
     })
 })
 
