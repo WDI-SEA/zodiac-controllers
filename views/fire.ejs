@@ -1,5 +1,14 @@
 <%- include('./partials/header.ejs') %>
 
-<h1>FIRE SIGNS</h1>
+<h2>FIRE SIGNS</h2>
+
+<% fireSigns.forEach( (signs) => { %>
+   <li> <%= signs %> </li>
+<% }) %>
+
+<h2> TRAITS </h2>
+<% fire.forEach( (traits) => { %>
+   <li> <%= traits %> </li>
+<% }) %>
 
 <%- include('./partials/footer.ejs') %>

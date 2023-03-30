@@ -18,7 +18,10 @@ app.get('/', (req,res)=> {
 //WATER ROUTE using "/water"
 app.get('/water', (req,res) =>{
     res.render('water', {
-        water: ['Private', 'Mysterious', 'Psychic', 'Charming', 'Emotional', 'Sensitive']
+        water: ['Private', 'Mysterious', 'Psychic', 'Charming', 'Emotional', 'Sensitive'],
+        
+        waterSigns: ['Pisces', 'Cancer', 'Scorpio']
+
     })
 })
 
@@ -26,7 +29,8 @@ app.get('/water', (req,res) =>{
 
 app.get('/air', (req,res) =>{
     res.render('air', {
-        air: ['Movement', 'Creativity', 'Action', 'Adventure', 'Exciting', 'Easily Provoked']
+        air: ['Movement', 'Creativity', 'Action', 'Adventure', 'Exciting', 'Easily Provoked'],
+        airSigns: ['Aquarius', 'Gemini', 'Libra']
     })
 })
 
@@ -34,16 +38,21 @@ app.get('/air', (req,res) =>{
 
 app.get('/fire', (req,res) =>{
     res.render('fire', {
-        fire: ['Passionate', 'Strong Emotions', 'Temperamental', 'Energetic', 'Accomplished', 'Interesting']
-    })
+        fire: ['Passionate', 'Strong Emotions', 'Temperamental', 'Energetic', 'Accomplished', 'Interesting'],
+        fireSigns: ['Aries', 'Leo', 'Sagittarius']
+    }
+    )
 })
 
 //EARTH ROUTE using "/earth"
 
 app.get('/earth', (req,res) =>{
     res.render('earth', {
-        earth: ['Grounded', 'Helpful', 'Practical', 'Realistic', 'Materialistic', 'Dependable']
-    })
+        earth: ['Grounded', 'Helpful', 'Practical', 'Realistic', 'Materialistic', 'Dependable'],
+        earthSigns: ['Taurus', 'Virgo', 'Capricorn']
+    }
+    
+    )
 })
 
 //set up the listener
