@@ -1,0 +1,22 @@
+body {
+    text-align: center;
+    background: rgb(51, 66, 77);
+    font-family: 'Cormorant Garamond', serif;
+    color: white;
+}
+
+.zodiacSigns {
+    font-size: 20px;
+    padding: 20px;
+  }
+.menu {
+    padding: 20px;
+}
+
+a {
+    color:white;
+}
+
+a:visited {
+    color:darkgray
+}

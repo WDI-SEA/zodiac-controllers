@@ -1,0 +1,17 @@
+<%- include ("partials/header.ejs") %>
+<body>
+    <h1>Air Signs</h1>
+    <h2>Here are the air signs:</h2>
+    <ul class="zodiacSigns">
+      <% signs.forEach((sign) => { %>
+        <a href="/air/<%= sign %>"><%= sign %></a>
+      <% }) %>
+      </ul>
+      <h2>Some common traits between the air sign:</h2>
+      <ul class="zodiacTraits">
+        <% traits.forEach((trait) => { %>
+            <%= trait %>
+          <% }) %>
+    </ul>
+</body>
+</html>

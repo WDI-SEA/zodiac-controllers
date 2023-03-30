@@ -1,0 +1,15 @@
+<%- include ("partials/header.ejs") %>
+    <h1>Water Signs</h1>
+    <h2>Here are the water signs:</h2>
+    <ul class="zodiacSigns">
+      <% signs.forEach((sign) => { %>
+        <a href="/water/<%= sign %>"><%= sign %></a>
+      <% }) %>
+      </ul>
+    <h2>Some common traits between the water sign:</h2>
+    <ul class="zodiacTraits">
+        <% traits.forEach((trait) => { %>
+            <%= trait %>
+          <% }) %>
+    </ul>
+</html>
