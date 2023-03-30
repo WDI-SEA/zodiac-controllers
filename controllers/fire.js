@@ -8,7 +8,8 @@ const fireTraits = ['Passionate', 'Strong Emotions', 'Temperamental', 'Energetic
 router.get('/', (req, res) => {
     res.render('fire', {
         signs: fireSigns,
-        traits: fireTraits
+        traits: fireTraits,
+        title: "Fire Signs and Traits"
     });
   });
 

@@ -1,21 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Water Signs</title>
-</head>
-<body>
+<%- include ("partials/header.ejs") %>
     <h1>Water Signs</h1>
-    <ul class="zodiacTraits">
-        <% signs.forEach((sign) => { %>
-          <li><%= sign %></li>
-        <% }) %>
+    <h2>Here are the water signs:</h2>
+    <ul class="zodiacSigns">
+      <% signs.forEach((sign) => { %>
+        <a href="/water/<%= sign %>"><%= sign %></a>
+      <% }) %>
       </ul>
-      <ul class="zodiacTraits">
+    <h2>Some common traits between the water sign:</h2>
+    <ul class="zodiacTraits">
         <% traits.forEach((trait) => { %>
-            <li><%= trait %></li>
+            <%= trait %>
           <% }) %>
     </ul>
 </html>

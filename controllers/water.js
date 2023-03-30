@@ -7,7 +7,8 @@ const waterTraits = ['Private', 'Mysterious', 'Psychic', 'Charming', 'Emotional'
   router.get('/', (req, res) => {
     res.render('water', {
         signs: waterSigns,
-        traits: waterTraits
+        traits: waterTraits,
+        title: "Water Signs and Traits"
     });
   });
   

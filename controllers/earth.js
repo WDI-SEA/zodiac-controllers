@@ -8,7 +8,8 @@ const earthTraits = ['Grounded', 'Helpful', 'Practical', 'Realistic', 'Materiali
 router.get('/', (req, res) => {
     res.render('earth', {
         signs: earthSigns,
-        traits: earthTraits
+        traits: earthTraits,
+        title: "Earth Signs and Traits"
     });
   });
 

@@ -17,7 +17,9 @@ app.use('/earth', require('./controllers/earth.js'));
 
 
 app.get('/', (req, res) => {
-    res.render('index.ejs');
+    res.render('index.ejs', {
+        title: "Zodiac Fun"
+    });
   });
   
 

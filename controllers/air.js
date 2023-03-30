@@ -8,7 +8,8 @@ const airTraits = ['Movement', 'Creativity', 'Action', 'Adventure', 'Exciting', 
 router.get('/', (req, res) => {
     res.render('air', {
         signs: airSigns,
-        traits: airTraits
+        traits: airTraits,
+        title: "Air Signs and Traits"
     });
   });
 
