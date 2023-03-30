@@ -16,12 +16,12 @@ router.get("/cancer", (req, res) => {
 
 // scorpio route
 router.get("/scorpio", (req, res) => {
-    res.sendFile(__dirname+"/imgs/scorpio.png")
+    res.sendFile("/Users/garrettheiner/Downloads/imgs/scorpio.png")
 })
 
 // pisces route
 router.get("/pisces", (req, res) => {
-    res.sendFile(__dirname+"/imgs/pisces.png")
+    res.sendFile("/Users/garrettheiner/Downloads/imgs/pisces.png")
 })
 
 module.exports = router
