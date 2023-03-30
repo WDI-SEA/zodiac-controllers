@@ -12,5 +12,11 @@ router.get("/", (req, res) => {
 router.get("/gemini", (req, res) => {
     res.sendFile(__dirname + "/imgs/gemini.png");
 })
+router.get("/libra", (req, res) => {
+    res.sendFile(__dirname + "/imgs/libra.png");
+})
+router.get("/aquarius", (req, res) => {
+    res.sendFile(__dirname + "/imgs/aquarius.png");
+})
 
 module.exports = router;
