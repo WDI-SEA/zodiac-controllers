@@ -1,0 +1,14 @@
+* {
+    background-color: rgb(55,67,95);
+    color: white;
+}
+
+.navbar li {
+    display: inline;
+    margin: 10px;
+}
+
+.signs li {
+    display: inline;
+    margin: 10px;
+}
