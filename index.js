@@ -7,6 +7,14 @@ const PORT = 8000
 
 //need to set engine using app.set(name, value )
 app.set('view engine', 'ejs')
+app.use(express.static(path.join(__dirname, 'public')))
+
+//set controllers
+app.use('/air', require('./controllers/air'))
+app.use('/earth', require('./controllers/earth'))
+app.use('/fire', require('./controllers/fire'))
+app.use('/water', require('./controllers/water'))
+
 
 //ROUTS
 
