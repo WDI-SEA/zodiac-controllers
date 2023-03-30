@@ -18,7 +18,7 @@ app.use("/earth", require("./controllers/earth"))
 // ROUTES
 // home route
 app.get("/", (req, res) => {
-    res.render("home.ejs")
+    res.render("index.ejs")
 })
 
 // listener
