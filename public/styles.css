@@ -1,0 +1,26 @@
+body {
+    background-color: rgb(42,47,54);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.categories {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+}
+
+.categories li {
+    margin: 0 50px;
+    list-style-type: none;
+    
+}
+
+a {
+    color: white;
+}

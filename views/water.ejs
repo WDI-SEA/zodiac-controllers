@@ -1,0 +1,16 @@
+<%- include('partials/header.ejs') %>
+
+<h1>Water</h1>
+<ul>
+    <% traits.forEach((trait) => { %>
+        <li> <%= trait %> </li>
+    <% }) %>
+</ul>
+<ul>
+    Signs
+    <% signs.forEach((sign) => { %>
+        <li><a href= "/<%= type %>/<%= sign %>"><%= sign %></a></li>
+    <% }) %>
+</ul>
+
+<%- include("partials/footer.ejs") %>
