@@ -1,0 +1,17 @@
+<%- include('partials/header.ejs') %>
+
+<h1>Here is a list of fire zodiacs and their traits!</h1>
+<ul>
+    <h3>Signs</h3>
+    <li><a href='/fire/aries'>Aries</a></li>
+    <li><a href='/fire/leo'>Leo</a></li>
+    <li><a href='/fire/sagittarius'>Sagittarius</a></li>
+</ul>
+<ul>
+    <h3>Traits</h3>
+    <%traits.forEach((trait) => {%>
+        <li><%=trait%></li>
+    <%}) %>
+</ul>
+
+<%- include('partials/footer.ejs') %>  
