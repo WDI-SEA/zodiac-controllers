@@ -1,26 +1,34 @@
 const express= require('express')
 const router = express.Router()
 
+//EARTH ROUTE using "/earth"
+
+app.get('/', (req,res) =>{
+    res.render('earth', {
+        earth: ['Grounded', 'Helpful', 'Practical', 'Realistic', 'Materialistic', 'Dependable'],
+        earthSigns: ['Taurus', 'Virgo', 'Capricorn']
+    }
+    
+    )
+})
+
 //earth/ Taurus
 
-app.get('/earth/taurus', (req,res) => {
-    res.render('gPhoto', {
-       earth: 'taurus is awsome' 
-    })
+app.get('/taurus', (req,res) => {
+    res.sendFile(__dirname + '/images/imgs/taurus.png'
+       )
 })
 
 //earth/ Virgo
-app.get('/earth/virgo', (req,res) => {
-    res.render('lPhoto', {
-       earth: 'virgo is awsome' 
-    })
+app.get('/virgo', (req,res) => {
+    res.sendFile(__dirname + '/images/imgs/virgo.png'
+       )
 })
 
 //earth/capricorn
-app.get('/earth/capricorn', (req,res) => {
-    res.render('aPhoto', {
-       earth: 'capricorn is awsome' 
-    })
+app.get('/capricorn', (req,res) => {
+    res.sendFile(__dirname + '/images/imgs/capricorn.png'
+       )
 })
 
-module.exports = router
+module.exports = router;
