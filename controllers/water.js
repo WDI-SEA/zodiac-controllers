@@ -10,5 +10,18 @@ const waterTraits = ['Private', 'Mysterious', 'Psychic', 'Charming', 'Emotional'
         traits: waterTraits
     });
   });
+  
+  router.get('/cancer', (req, res) => {
+    res.sendFile('/Users/juanecabrera/seir-306/unit2/zodiac-controllers/imgs/cancer.png');
+  });
+  
+  router.get('/scorpio', (req, res) => {
+    res.sendFile('/Users/juanecabrera/seir-306/unit2/zodiac-controllers/imgs/scorpio.png');
+  });
+  
+  router.get('/pisces', (req, res) => {
+    res.sendFile('/Users/juanecabrera/seir-306/unit2/zodiac-controllers/imgs/pisces.png')
+  })
+
 
 module.exports = router;

@@ -12,5 +12,16 @@ router.get('/', (req, res) => {
     });
   });
 
+  router.get('/leo', (req, res) => {
+    res.sendFile('/Users/juanecabrera/seir-306/unit2/zodiac-controllers/imgs/leo.png');
+  });
+  
+  router.get('/aries', (req, res) => {
+    res.sendFile('/Users/juanecabrera/seir-306/unit2/zodiac-controllers/imgs/aries.png');
+  });
+  
+  router.get('/sagittarius', (req, res) => {
+    res.sendFile('/Users/juanecabrera/seir-306/unit2/zodiac-controllers/imgs/sagittarius.png')
+  })
 
 module.exports = router;
