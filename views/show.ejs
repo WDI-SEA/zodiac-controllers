@@ -8,10 +8,17 @@
 </head>
 <body>
   <h1><%= element.type %></h1>
+  <UL>
+    <% element.sign.forEach((trait) => { %>
+      <li> <a href="/ <%= element.type %>/ <%= sign %>>"<%= signs %>></a> </li>
+    <%  }) %>
+  </UL>
+
   <ul>
    <% element.traits.forEach((trait) => { %>
     <li> <%= trait %> </li>
   <%  }) %>
   </ul>
+  
 </body>
 </html>
