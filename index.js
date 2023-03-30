@@ -3,7 +3,10 @@ const app = express();
 const PORT = 8000;
 
 app.set("view engine", "ejs");
-app.use(express.static("public"))
+app.use(express.static("public"));
+
+// CONTROLLERS
+app.use("/air", require("./controllers/air"));
 
 // ROUTES 
 
@@ -21,13 +24,13 @@ app.get("/water", (req, res) => {
     console.log("water");
 })
 
-app.get("/air", (req, res) => {
-    // res.send("air page is working");
-    res.render("air.ejs", {
-        air:['gemini', 'libra', 'aquarius']
-    })
-    console.log("air");
-})
+// app.get("/air", (req, res) => {
+//     // res.send("air page is working");
+//     res.render("air.ejs", {
+//         air:['gemini', 'libra', 'aquarius']
+//     })
+//     console.log("air");
+// })
 
 app.get("/fire", (req, res) => {
     // res.send("fire page is working");
