@@ -23,6 +23,16 @@ app.get('/', (req,res)=> {
     res.render('index')
 })
 
+//AIR ROUTE using "/air"
+
+app.get('/air', (req,res) =>{
+    res.render('air', {
+        type: "air",
+        air: ['Movement', 'Creativity', 'Action', 'Adventure', 'Exciting', 'Easily Provoked'],
+        airSigns: ['Aquarius', 'Gemini', 'Libra']
+    })
+})
+
 
 
 
