@@ -1,0 +1,14 @@
+<%- include('./partials/header.ejs') %>
+
+<h2>WATER SIGNS</h2>
+
+<% waterSigns.forEach( (signs)=> { %>
+  <li>  <%= signs %> </li>
+<% }) %>
+
+<h2> TRAITS </h2>
+<% water.forEach( (attributes)=> { %>
+  <li>  <%= attributes %> </li>
+<% }) %>
+
+<%- include('./partials/footer.ejs') %>

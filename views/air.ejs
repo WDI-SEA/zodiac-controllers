@@ -1,0 +1,15 @@
+<%- include('./partials/header.ejs') %>
+
+<h2> AIR SIGNS</h2>
+<% airSigns.forEach( (signs)=> { %>
+    <li><%= signs %></li>
+<% }) %>
+<h2> Traits </h2>
+<img src="/images/imgs/aquarius.png" alt="zodiac" />
+<% air.forEach( (attributes)=> { %>
+    <li><%= attributes %></li>
+<% }) %>
+
+
+
+<%- include('./partials/footer.ejs') %>
